@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://levki82wsprw"
-path="res://.godot/imported/cherry-7.png-c98007a8643b4d9da31d0248a1721201.ctex"
+path="res://.godot/imported/cherry-7.png-f1ade2c819f467731b057c5db9942f19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/cherry/cherry-7.png"
-dest_files=["res://.godot/imported/cherry-7.png-c98007a8643b4d9da31d0248a1721201.ctex"]
+source_file="res://Assets/Sprites/Items/cherry/cherry-7.png"
+dest_files=["res://.godot/imported/cherry-7.png-f1ade2c819f467731b057c5db9942f19.ctex"]
 
 [params]
 
