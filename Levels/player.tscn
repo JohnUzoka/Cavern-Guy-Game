@@ -1,10 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://diuwtepkf5s"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ks4yu"]
+[gd_scene format=3 uid="uid://diuwtepkf5s"]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_ks4yu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

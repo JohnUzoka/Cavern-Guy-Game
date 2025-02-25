@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cuu7jm6w8mksk" path="res://Assets/Sprites/Tiles/background4b.png" id="4_pg5ws"]
 [ext_resource type="Texture2D" uid="uid://b6c3j4t1menj0" path="res://Assets/Sprites/Characters/guy/jump.png" id="4_yc27y"]
 [ext_resource type="Texture2D" uid="uid://cbmmaiyfybk0m" path="res://Assets/Sprites/Tiles/background4a.png" id="5_yi78u"]
-[ext_resource type="Texture2D" uid="uid://duw51wh8bcyll" path="res://Assets/Sprites/Characters/slime/stance/large (1).png" id="10_y62am"]
+[ext_resource type="Texture2D" uid="uid://btjp03m28hpm7" path="res://Assets/Sprites/Characters/slime/stance/medium (1).png" id="10_bteb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lw6p2"]
 texture = ExtResource("1_r5jye")
@@ -15594,9 +15594,9 @@ tile_map_data = PackedByteArray("AAAAAAUAAwACAAMAAAABAAUAAwADAAMAAAACAAUAAwACAAM
 tile_set = SubResource("TileSet_0cjhn")
 
 [node name="Jump" type="Sprite2D" parent="."]
-position = Vector2(500, 435)
+position = Vector2(500, 438)
 texture = ExtResource("4_yc27y")
 
-[node name="Large(1)" type="Sprite2D" parent="."]
-position = Vector2(553, 444)
-texture = ExtResource("10_y62am")
+[node name="Medium(1)" type="Sprite2D" parent="."]
+position = Vector2(470, 448)
+texture = ExtResource("10_bteb6")
