@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://d0ljx0jvne3nb"]
+[gd_scene load_steps=26 format=4 uid="uid://d0ljx0jvne3nb"]
 
 [ext_resource type="Texture2D" uid="uid://qdc60ao460wl" path="res://Assets/Sprites/Tiles/props1.png" id="1_mgyeg"]
 [ext_resource type="Texture2D" uid="uid://1payibpt3eee" path="res://Assets/Sprites/Tiles/background1.png" id="1_r5jye"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b6c3j4t1menj0" path="res://Assets/Sprites/Characters/guy/jump.png" id="4_yc27y"]
 [ext_resource type="Texture2D" uid="uid://cbmmaiyfybk0m" path="res://Assets/Sprites/Tiles/background4a.png" id="5_yi78u"]
 [ext_resource type="Texture2D" uid="uid://btjp03m28hpm7" path="res://Assets/Sprites/Characters/slime/stance/medium (1).png" id="10_bteb6"]
+[ext_resource type="Texture2D" uid="uid://bltdlrg2nqpbs" path="res://Assets/Sprites/Characters/Wolf/Canine_White_Run.png" id="11_5fl74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lw6p2"]
 texture = ExtResource("1_r5jye")
@@ -15594,9 +15595,13 @@ tile_map_data = PackedByteArray("AAAAAAUAAwACAAMAAAABAAUAAwADAAMAAAACAAUAAwACAAM
 tile_set = SubResource("TileSet_0cjhn")
 
 [node name="Jump" type="Sprite2D" parent="."]
-position = Vector2(500, 438)
+position = Vector2(446, 439)
 texture = ExtResource("4_yc27y")
 
 [node name="Medium(1)" type="Sprite2D" parent="."]
-position = Vector2(470, 448)
+position = Vector2(306, 447)
 texture = ExtResource("10_bteb6")
+
+[node name="CanineWhiteRun" type="Sprite2D" parent="."]
+position = Vector2(916, 442)
+texture = ExtResource("11_5fl74")
