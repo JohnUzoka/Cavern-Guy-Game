@@ -53,3 +53,6 @@ func update_facing_direction() -> void:
 		animated_sprite_2d.flip_h = false
 	elif velocity.x < 0:
 		animated_sprite_2d.flip_h = true
+		
+func take_damage(damage_amount) -> void:
+		print("Player Was Hurt")

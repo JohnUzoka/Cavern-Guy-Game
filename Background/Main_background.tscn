@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ud1wr6r285dd"]
+
+[ext_resource type="Texture2D" uid="uid://1payibpt3eee" path="res://Assets/Sprites/Tiles/background1.png" id="1_6drxv"]
+[ext_resource type="Texture2D" uid="uid://dgcwux6tg8bxf" path="res://Assets/Sprites/Tiles/background2.png" id="2_b3jct"]
+[ext_resource type="Texture2D" uid="uid://bkuxj2wxuqi7k" path="res://Assets/Sprites/Tiles/background3.png" id="3_6u62s"]
+[ext_resource type="Texture2D" uid="uid://cbmmaiyfybk0m" path="res://Assets/Sprites/Tiles/background4a.png" id="4_n06af"]
+
+[node name="MainBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Background1" type="Sprite2D" parent="."]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_6drxv")
+centered = false
+
+[node name="Background2" type="Sprite2D" parent="."]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_b3jct")
+centered = false
+
+[node name="Background3" type="Sprite2D" parent="."]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_6u62s")
+centered = false
+
+[node name="Background4a" type="Sprite2D" parent="."]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_n06af")
+centered = false

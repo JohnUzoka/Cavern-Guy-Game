@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://diuwtepkf5s"]
+[gd_scene load_steps=39 format=3 uid="uid://diuwtepkf5s"]
 
 [ext_resource type="Texture2D" uid="uid://d4jr8uxmchq0y" path="res://Assets/Sprites/Characters/guy/mid air.png" id="1_3yc10"]
 [ext_resource type="Script" path="res://Actors/Player.gd" id="1_81sed"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b6c3j4t1menj0" path="res://Assets/Sprites/Characters/guy/jump.png" id="3_dhgri"]
 [ext_resource type="Texture2D" uid="uid://blkd0a63yongd" path="res://Assets/Sprites/Characters/guy/landing.png" id="4_oyeci"]
 [ext_resource type="Texture2D" uid="uid://dg3nplsf7qrf4" path="res://Assets/Sprites/Characters/guy/run.png" id="5_v7dhy"]
+[ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="7_h1j0i"]
+[ext_resource type="PackedScene" uid="uid://bej8qn5vagpqw" path="res://Components/hurt_box_component.tscn" id="8_y265q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iyq3d"]
 atlas = ExtResource("1_3yc10")
@@ -226,6 +228,13 @@ animations = [{
 radius = 11.0
 height = 36.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frs3i"]
+size = Vector2(9, 3)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ng0ry"]
+radius = 11.0
+height = 36.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 6
 script = ExtResource("1_81sed")
@@ -241,3 +250,19 @@ centered = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_ufb0b")
+
+[node name="HitBoxComponet" parent="." instance=ExtResource("7_h1j0i")]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]
+position = Vector2(0.5, 15.5)
+shape = SubResource("RectangleShape2D_frs3i")
+debug_color = Color(0.999852, 0, 0.0988114, 0.42)
+
+[node name="HurtBoxComponent" parent="." instance=ExtResource("8_y265q")]
+collision_mask = 32
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_ng0ry")
+debug_color = Color(0, 0.63543, 0.417287, 0.42)
