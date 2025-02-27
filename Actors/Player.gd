@@ -1,5 +1,5 @@
 # This script defines a Player character that can move and jump in the game.
-extends Actor  # Extends the Actor class, making this a Player character
+extends Actor  # Extends the Actor class, making this a Player character.
 
 # Assigns a class name "Player" to this script for easy reference in the editor.
 class_name Player  
@@ -19,18 +19,20 @@ const MAX_HEALTH = 3
 # Player's current health.
 var player_health: int = 3  
 
-# Runs every physics frame to handle movement and gravity.
+# Runs every physics frame to handle movement, gravity, and animations.
 func _physics_process(delta):  
 	# Gets input direction (-1 for left, 1 for right, 0 if no input).
 	var direction = Input.get_axis("move_left", "move_right")  
 
 	# Applies gravity when the player is not on the floor.
 	if not is_on_floor():  
-		velocity.y += gravity * delta 
-		#play fall anim if moving vericallly else play jump
-		animated_sprite_2d.play("MidAir" if velocity.y > 0 else "Jump")
+		velocity.y += gravity * delta  
+
+		# Plays the "MidAir" animation when falling, and "Jump" when moving upward.
+		animated_sprite_2d.play("MidAir" if velocity.y > 0 else "Jump")  
 	else:
-		animated_sprite_2d.play("Run" if direction else "Idle")
+		# Plays "Run" animation if moving, otherwise plays "Idle".
+		animated_sprite_2d.play("Run" if direction else "Idle")  
 
 	# Makes the player jump if the jump button is pressed and they are on the floor.
 	if Input.is_action_just_pressed("jump") and is_on_floor():  
@@ -43,16 +45,20 @@ func _physics_process(delta):
 		# Gradually slows down movement when no input is given.
 		velocity.x = move_toward(velocity.x, 0, move_speed)  
 
-	update_facing_direction()
+	# Updates the player's facing direction based on movement.
+	update_facing_direction()  
+
 	# Moves the player while handling collisions.
 	move_and_slide()  
 	
-#fucntion t update facing direction if moving in negative direction
+# Updates the player's facing direction based on movement.
 func update_facing_direction() -> void:
 	if velocity.x > 0:
-		animated_sprite_2d.flip_h = false
+		animated_sprite_2d.flip_h = false  # Facing right
 	elif velocity.x < 0:
-		animated_sprite_2d.flip_h = true
+		animated_sprite_2d.flip_h = true  # Facing left
 		
+# Function to handle player damage.
 func take_damage(damage_amount) -> void:
-		print("Player Was Hurt")
+	pass
+	print("Player Was Hurt")  # Displays a message when the player is hurt.

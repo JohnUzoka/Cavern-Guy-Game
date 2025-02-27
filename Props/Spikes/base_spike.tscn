@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://voskiqvwqfpo"]
+[gd_scene load_steps=3 format=3 uid="uid://voskiqvwqfpo"]
 
+[ext_resource type="Script" path="res://Props/Spikes/base_spike.gd" id="1_3evgn"]
 [ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="1_iahtd"]
 
 [node name="BaseSpike" type="StaticBody2D"]
 collision_layer = 8
 collision_mask = 0
+script = ExtResource("1_3evgn")
 
 [node name="HitBoxComponet" parent="." instance=ExtResource("1_iahtd")]
 collision_layer = 48

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjs47to4yduvx"
-path="res://.godot/imported/Canine_White_Run.png-82f851b908483c6661188a4872251d99.ctex"
+uid="uid://bq3b4ox7m27q5"
+path="res://.godot/imported/Explosion02_frame8.png-14f146c29765c7fcc3a8ae3adf35dddd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Canine_White_Run.png"
-dest_files=["res://.godot/imported/Canine_White_Run.png-82f851b908483c6661188a4872251d99.ctex"]
+source_file="res://Assets/Sprites/effects/Explosion02/Frames/Explosion02_frame8.png"
+dest_files=["res://.godot/imported/Explosion02_frame8.png-14f146c29765c7fcc3a8ae3adf35dddd.ctex"]
 
 [params]
 
