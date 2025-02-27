@@ -63,18 +63,18 @@ height = 36.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kfj2k"]
 size = Vector2(167, 22)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1qba"]
-size = Vector2(15.25, 4)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_673g4"]
 size = Vector2(14, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1qba"]
+size = Vector2(15.25, 4)
 
 [sub_resource type="Animation" id="Animation_jwwre"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HurtBoxComponent/CollisionShape2D2:position")
+tracks/0/path = NodePath("HitBoxComponet/CollisionShape2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -134,7 +134,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("HitBoxComponet/CollisionShape2D:position")
+tracks/5/path = NodePath("HurtBoxComponent/CollisionShape2D2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -149,7 +149,7 @@ resource_name = "move_left"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HurtBoxComponent/CollisionShape2D2:position")
+tracks/0/path = NodePath("HitBoxComponet/CollisionShape2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -209,7 +209,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("HitBoxComponet/CollisionShape2D:position")
+tracks/5/path = NodePath("HurtBoxComponent/CollisionShape2D2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -237,7 +237,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("HurtBoxComponent/CollisionShape2D2:position")
+tracks/1/path = NodePath("HitBoxComponet/CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -261,7 +261,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("HitBoxComponet/CollisionShape2D:position")
+tracks/3/path = NodePath("HurtBoxComponent/CollisionShape2D2:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -310,20 +310,20 @@ visible = false
 collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]
-position = Vector2(-3.25, 0)
-scale = Vector2(2, 1)
-shape = SubResource("RectangleShape2D_t1qba")
-debug_color = Color(1, 0, 1, 0.419608)
+position = Vector2(-1, 9)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_673g4")
+debug_color = Color(0.992157, 0, 0, 0.419608)
 
 [node name="HurtBoxComponent" parent="." instance=ExtResource("4_iyd2f")]
 visible = false
 collision_mask = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
-position = Vector2(-1, 9)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_673g4")
-debug_color = Color(0.992157, 0, 0, 0.419608)
+position = Vector2(-3.25, 0)
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_t1qba")
+debug_color = Color(1, 0, 1, 0.419608)
 
 [node name="DangerDetectorLeft" type="RayCast2D" parent="."]
 visible = false

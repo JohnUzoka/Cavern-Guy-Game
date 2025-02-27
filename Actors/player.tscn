@@ -228,14 +228,14 @@ animations = [{
 radius = 11.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frs3i"]
-size = Vector2(9, 3)
+size = Vector2(9, 2)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ng0ry"]
 radius = 11.0
 height = 32.0
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 6
+collision_layer = 2
 script = ExtResource("1_81sed")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -252,11 +252,10 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_ufb0b")
 
 [node name="HitBoxComponet" parent="." instance=ExtResource("7_h1j0i")]
-visible = false
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]
-position = Vector2(0.5, 15.5)
+position = Vector2(0.5, 16)
 shape = SubResource("RectangleShape2D_frs3i")
 debug_color = Color(0.999852, 0, 0.0988114, 0.42)
 

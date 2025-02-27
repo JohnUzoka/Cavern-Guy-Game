@@ -56,15 +56,13 @@ func _physics_process(delta):
 	move_and_slide()  
 
 # Called when the enemy takes damage.
-# This function checks if the attack came from above before allowing the enemy to die.
 func take_damage(damage_amount, body) -> void:
-	# If the attacker's position is **below** the enemy's hurtbox, ignore the damage.
-	# This prevents damage from invalid sources (e.g., side or bottom collisions).
-	if body.global_position.y > get_node("HurtBoxComponent").global_position.y:
-		return  # Exit the function without applying damage.
-
-	# If the attack is valid (e.g., from above), the enemy dies.
-	die()
+	# Only take damage if the attack came from above. player is falling
+	if body.owner.velocity.y < 0:
+		# Ignore damage if coming from below or the sides.
+		return  
+	# If the damage is valid, call die() to handle the death of the enemy.
+	die() 
 
 # Determines how the enemy should move based on obstacles.
 func calculate_move_velocity() -> void:

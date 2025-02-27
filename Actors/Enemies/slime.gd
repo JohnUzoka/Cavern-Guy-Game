@@ -57,8 +57,8 @@ func _physics_process(delta):
 
 # Called when the enemy takes damage.
 func take_damage(damage_amount, body) -> void:
-	# Only take damage if the attack came from above.
-	if body.global_position.y > get_node("HurtBoxComponent").global_position.y:
+	# Only take damage if the attack came from above. player is falling
+	if body.owner.velocity.y < 0:
 		# Ignore damage if coming from below or the sides.
 		return  
 	# If the damage is valid, call die() to handle the death of the enemy.

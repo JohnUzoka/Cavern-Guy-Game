@@ -96,7 +96,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxs1a"]
-size = Vector2(13, 23)
+size = Vector2(11, 23)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_413ab"]
 radius = 62.0
@@ -105,27 +105,27 @@ radius = 62.0
 size = Vector2(23, 10)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vwgw"]
-radius = 5.0
-height = 22.0
+radius = 4.0
+height = 20.0
 
 [node name="Slime" type="CharacterBody2D"]
-collision_layer = 6
+collision_layer = 4
 script = ExtResource("1_6hbqt")
 move_speed = 30.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nlg0s")
 animation = &"Idle"
-frame_progress = 0.528452
+frame_progress = 0.337524
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-1.5, 9.5)
+position = Vector2(-1.5, 10.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_vxs1a")
 
 [node name="AttackBoxComponent" parent="." instance=ExtResource("3_3ydf0")]
 visible = false
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBoxComponent"]
 position = Vector2(0, 10)
@@ -133,7 +133,6 @@ shape = SubResource("CircleShape2D_413ab")
 debug_color = Color(0, 1, 0, 0.419608)
 
 [node name="HitBoxComponet" parent="." instance=ExtResource("4_hhto5")]
-visible = false
 collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]
@@ -142,17 +141,16 @@ shape = SubResource("RectangleShape2D_hurnp")
 debug_color = Color(1, 0, 0, 0.419608)
 
 [node name="HurtBoxComponent" parent="." instance=ExtResource("5_buy11")]
-visible = false
 collision_mask = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
-position = Vector2(-1.5, 8)
+position = Vector2(-2, 7)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_2vwgw")
 debug_color = Color(1, 0, 1, 0.419608)
 
 [node name="CoolTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 7.0
 
 [connection signal="chase_began" from="AttackBoxComponent" to="." method="_on_attack_box_component_chase_began"]
 [connection signal="chase_ended" from="AttackBoxComponent" to="." method="_on_attack_box_component_chase_ended"]
