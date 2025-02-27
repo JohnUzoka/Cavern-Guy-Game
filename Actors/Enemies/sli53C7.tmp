@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b6wktmm1jv2w8"]
+[gd_scene load_steps=24 format=3 uid="uid://b6wktmm1jv2w8"]
 
 [ext_resource type="Script" path="res://Actors/Enemies/slime.gd" id="1_6hbqt"]
 [ext_resource type="Texture2D" uid="uid://cvpioue8ocknt" path="res://Assets/Sprites/Characters/slime-spiked/Slime_Spiked_Jump.png" id="1_unssf"]
@@ -39,6 +39,14 @@ region = Rect2(128, 0, 64, 64)
 atlas = ExtResource("2_huv8k")
 region = Rect2(192, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_icqav"]
+atlas = ExtResource("1_unssf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gek8u"]
+atlas = ExtResource("1_unssf")
+region = Rect2(64, 0, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0yf6"]
 atlas = ExtResource("1_unssf")
 region = Rect2(128, 0, 64, 64)
@@ -50,7 +58,7 @@ region = Rect2(192, 0, 64, 64)
 [sub_resource type="SpriteFrames" id="SpriteFrames_nlg0s"]
 animations = [{
 "frames": [{
-"duration": 3.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_uiyih")
 }, {
 "duration": 1.0,
@@ -85,6 +93,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_icqav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gek8u")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_c0yf6")
 }, {
 "duration": 1.0,
@@ -99,7 +113,7 @@ animations = [{
 size = Vector2(13, 23)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_413ab"]
-radius = 62.0
+radius = 35.0143
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hurnp"]
 size = Vector2(23, 10)
@@ -109,14 +123,18 @@ radius = 5.0
 height = 22.0
 
 [node name="Slime" type="CharacterBody2D"]
-collision_layer = 6
+collision_layer = 4
 script = ExtResource("1_6hbqt")
-move_speed = 30.0
+jump_impulse = null
+pob_point = null
+move_speed = null
+gravity = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nlg0s")
-animation = &"Idle"
-frame_progress = 0.528452
+animation = &"Fall"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

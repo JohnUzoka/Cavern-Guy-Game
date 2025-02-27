@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Components/attack_box_component.gd" id="1_tjtl6"]
 
 [node name="AttackBoxComponent" type="Area2D"]
-collision_layer = 2
+collision_layer = 0
 input_pickable = false
 monitorable = false
 script = ExtResource("1_tjtl6")

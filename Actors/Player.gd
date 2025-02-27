@@ -5,7 +5,7 @@ extends Actor  # Extends the Actor class, making this a Player character.
 class_name Player  
 
 # Signal emitted when the game is over (e.g., when the player runs out of health).
-signal game_over  
+signal game_over
 
 # Defines the force applied when the player jumps.
 @export var jump_impulse: float = 150.0  
@@ -59,6 +59,5 @@ func update_facing_direction() -> void:
 		animated_sprite_2d.flip_h = true  # Facing left
 		
 # Function to handle player damage.
-func take_damage(damage_amount) -> void:
+func take_damage(damage_amount, body) -> void:
 	pass
-	print("Player Was Hurt")  # Displays a message when the player is hurt.

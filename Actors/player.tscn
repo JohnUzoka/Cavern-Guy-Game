@@ -226,17 +226,16 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ufb0b"]
 radius = 11.0
-height = 36.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frs3i"]
 size = Vector2(9, 3)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ng0ry"]
 radius = 11.0
-height = 36.0
+height = 32.0
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 2
+collision_layer = 6
 script = ExtResource("1_81sed")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -248,10 +247,12 @@ frame_progress = 0.463822
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+visible = false
+position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_ufb0b")
 
 [node name="HitBoxComponet" parent="." instance=ExtResource("7_h1j0i")]
+visible = false
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]
@@ -260,9 +261,10 @@ shape = SubResource("RectangleShape2D_frs3i")
 debug_color = Color(0.999852, 0, 0.0988114, 0.42)
 
 [node name="HurtBoxComponent" parent="." instance=ExtResource("8_y265q")]
+visible = false
 collision_mask = 32
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
-position = Vector2(0, -1)
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_ng0ry")
 debug_color = Color(0, 0.63543, 0.417287, 0.42)

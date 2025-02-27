@@ -11,5 +11,5 @@ class_name Actor
 @export var gravity: float = 50.0  
 
 # A function that will handle damage taken by the character.   
-func take_damage(damage_amount) -> void:  
+func take_damage(_damage_amount, _body) -> void:  
 	pass  # This means "do nothing for now" - you can add code here later.  

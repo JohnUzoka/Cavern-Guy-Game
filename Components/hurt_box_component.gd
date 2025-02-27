@@ -17,11 +17,11 @@ func _on_body_entered(hitbox: HitBox) -> void:
 	# Checks if the owner (the object this script belongs to) has a "take_damage" function.
 	if owner.has_method("take_damage"):  
 		# Starts temporary invincibility.
-		_invincibility_start()  
+		_invincibility_start()
 
 		# Calls the owner's take_damage function and applies the damage from the hitbox.
-		owner.take_damage(hitbox.damage)  
-
+		owner.take_damage(hitbox.damage, hitbox)
+		
 # This function runs when the invincibility timer finishes.
 func _invincibility_timeout() -> void:  
 	# Enables the collision shape again, allowing the object to take damage.

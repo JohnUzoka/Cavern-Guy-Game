@@ -55,8 +55,15 @@ func _physics_process(delta):
 	# Moves the enemy while handling collisions.
 	move_and_slide()  
 
-# Called when the enemy takes damage (currently empty, but can be extended).
-func take_damage(amount) -> void:
+# Called when the enemy takes damage.
+# This function checks if the attack came from above before allowing the enemy to die.
+func take_damage(damage_amount, body) -> void:
+	# If the attacker's position is **below** the enemy's hurtbox, ignore the damage.
+	# This prevents damage from invalid sources (e.g., side or bottom collisions).
+	if body.global_position.y > get_node("HurtBoxComponent").global_position.y:
+		return  # Exit the function without applying damage.
+
+	# If the attack is valid (e.g., from above), the enemy dies.
 	die()
 
 # Determines how the enemy should move based on obstacles.
