@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://d0ljx0jvne3nb"]
+[gd_scene load_steps=21 format=4 uid="uid://d0ljx0jvne3nb"]
 
 [ext_resource type="Texture2D" uid="uid://qdc60ao460wl" path="res://Assets/Sprites/Tiles/props1.png" id="1_mgyeg"]
 [ext_resource type="Texture2D" uid="uid://bv1nlut2kyngh" path="res://Assets/Sprites/Tiles/props2.png" id="2_x12ps"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b6wktmm1jv2w8" path="res://Actors/Enemies/slime.tscn" id="10_exyks"]
 [ext_resource type="PackedScene" uid="uid://c0ovofh8ppr24" path="res://Props/Spikes/spike_skull.tscn" id="10_hn1m1"]
 [ext_resource type="PackedScene" uid="uid://b827ij6a4wa7h" path="res://Props/Spikes/spike_top.tscn" id="11_8spxu"]
+[ext_resource type="PackedScene" uid="uid://2acfqepdgqxl" path="res://UserInterface/HUD.tscn" id="11_rmc8n"]
 [ext_resource type="PackedScene" uid="uid://ud1wr6r285dd" path="res://Background/Main_background.tscn" id="13_bipai"]
 [ext_resource type="PackedScene" uid="uid://reynpnfkyebo" path="res://Actors/Enemies/wolf.tscn" id="14_p1e5d"]
 
@@ -9776,3 +9777,7 @@ position = Vector2(715, 440)
 
 [node name="Slime" parent="." instance=ExtResource("10_exyks")]
 position = Vector2(364, 440)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("11_rmc8n")]

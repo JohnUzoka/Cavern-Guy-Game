@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bon0w4c14trgi"]
+
+[ext_resource type="Texture2D" uid="uid://h850nsn85e5f" path="res://Assets/Sprites/Items/heart/RedUI1.png" id="1_bro2r"]
+[ext_resource type="Texture2D" uid="uid://se46d81o0wqq" path="res://Assets/Sprites/Items/heart/RedUI2.png" id="2_n60j3"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_spp3x"]
+frames = 2
+speed_scale = 3.0
+frame_0/texture = ExtResource("1_bro2r")
+frame_1/texture = ExtResource("2_n60j3")
+frame_1/duration = 1.0
+
+[node name="Heart" type="TextureRect"]
+custom_minimum_size = Vector2(20, 20)
+size_flags_horizontal = 8
+size_flags_vertical = 3
+texture = SubResource("AnimatedTexture_spp3x")
+expand_mode = 2
+stretch_mode = 5

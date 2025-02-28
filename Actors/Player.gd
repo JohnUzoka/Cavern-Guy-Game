@@ -8,7 +8,7 @@ class_name Player
 signal game_over
 
 # Defines the force applied when the player jumps.
-@export var jump_impulse: float = 150.0  
+@export var jump_impulse: float = 170.0  
 
 # Stores a reference to the player's animated sprite.
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D  

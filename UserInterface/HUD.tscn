@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://2acfqepdgqxl"]
+
+[ext_resource type="PackedScene" uid="uid://bon0w4c14trgi" path="res://UserInterface/Heart.tscn" id="1_4u8p6"]
+[ext_resource type="Texture2D" uid="uid://ci8cnmb7og8jh" path="res://Assets/Sprites/Items/gem/gemUI-1.png" id="2_ptwlb"]
+[ext_resource type="Texture2D" uid="uid://cecuplrfr7wmu" path="res://Assets/Sprites/Items/gem/gemUI-2.png" id="3_bgw8n"]
+[ext_resource type="Texture2D" uid="uid://hnc447ut7lc0" path="res://Assets/Sprites/Items/gem/gemUI-3.png" id="4_7kecw"]
+[ext_resource type="Texture2D" uid="uid://cw41k0x7gb2ig" path="res://Assets/Sprites/Items/gem/gemUI-4.png" id="5_5tw8t"]
+[ext_resource type="Texture2D" uid="uid://hi8hghd7f7rr" path="res://Assets/Sprites/Items/gem/gemUI-5.png" id="6_u8nr0"]
+[ext_resource type="FontFile" uid="uid://dgib2ynmwa3l5" path="res://Assets/Others/MinimalPixel v2.ttf" id="7_72jr4"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_au4xk"]
+frames = 5
+speed_scale = 10.0
+frame_0/texture = ExtResource("2_ptwlb")
+frame_1/texture = ExtResource("3_bgw8n")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_7kecw")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("5_5tw8t")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("6_u8nr0")
+frame_4/duration = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_sqfxn"]
+line_spacing = 0.0
+font = ExtResource("7_72jr4")
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+
+[node name="HUD" type="VBoxContainer"]
+offset_left = 889.0
+offset_top = 30.0
+offset_right = 1226.0
+offset_bottom = 142.0
+
+[node name="HealthBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+
+[node name="Heart" parent="HealthBoxContainer" instance=ExtResource("1_4u8p6")]
+layout_mode = 2
+
+[node name="Heart2" parent="HealthBoxContainer" instance=ExtResource("1_4u8p6")]
+layout_mode = 2
+
+[node name="Heart3" parent="HealthBoxContainer" instance=ExtResource("1_4u8p6")]
+layout_mode = 2
+
+[node name="CoinContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="CoinContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("AnimatedTexture_au4xk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CoinContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "200
+"
+label_settings = SubResource("LabelSettings_sqfxn")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -298,6 +298,7 @@ shape = SubResource("CapsuleShape2D_dd0ig")
 
 [node name="AttackBoxComponent" parent="." instance=ExtResource("2_fhprw")]
 visible = false
+collision_mask = 2
 priority = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBoxComponent"]
