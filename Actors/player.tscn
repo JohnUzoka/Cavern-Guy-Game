@@ -252,6 +252,7 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_ufb0b")
 
 [node name="HitBoxComponet" parent="." instance=ExtResource("7_h1j0i")]
+visible = false
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]

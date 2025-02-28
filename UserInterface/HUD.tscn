@@ -29,10 +29,12 @@ font_color = Color(0, 0, 0, 1)
 outline_size = 8
 
 [node name="HUD" type="VBoxContainer"]
-offset_left = 889.0
-offset_top = 30.0
-offset_right = 1226.0
-offset_bottom = 142.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -189.0
+offset_bottom = 112.0
+grow_horizontal = 0
 
 [node name="HealthBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -53,14 +55,15 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="CoinContainer"]
+layout_direction = 3
 layout_mode = 2
 size_flags_horizontal = 3
 texture = SubResource("AnimatedTexture_au4xk")
-expand_mode = 2
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="CoinContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 8
 text = "200
 "

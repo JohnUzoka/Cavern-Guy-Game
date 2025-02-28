@@ -116,9 +116,10 @@ move_speed = 30.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nlg0s")
 animation = &"Idle"
-frame_progress = 0.0340877
+frame_progress = 0.293744
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1.5, 10.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_vxs1a")
@@ -133,6 +134,7 @@ shape = SubResource("CircleShape2D_413ab")
 debug_color = Color(0, 1, 0, 0.419608)
 
 [node name="HitBoxComponet" parent="." instance=ExtResource("4_hhto5")]
+visible = false
 collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]
@@ -141,6 +143,7 @@ shape = SubResource("RectangleShape2D_hurnp")
 debug_color = Color(1, 0, 0, 0.419608)
 
 [node name="HurtBoxComponent" parent="." instance=ExtResource("5_buy11")]
+visible = false
 collision_mask = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]

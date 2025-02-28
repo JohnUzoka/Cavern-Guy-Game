@@ -9781,3 +9781,4 @@ position = Vector2(364, 440)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("11_rmc8n")]
+metadata/_edit_vertical_guides_ = [1083.0, 1134.0, 1137.0]
