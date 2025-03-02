@@ -90,13 +90,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r822w")
 }],
-"loop": true,
-"name": &"Anmate",
+"loop": false,
+"name": &"Animate",
 "speed": 10.0
 }]
 
 [node name="ItemFeedbackEffect" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_ifyy2")
-animation = &"Anmate"
-frame_progress = 0.442895
+animation = &"Animate"
 script = ExtResource("2_vpxhr")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dahyxxvxrlgtf"]
+
+[ext_resource type="Script" path="res://Pickups/base_pickup.gd" id="1_tk1r8"]
+
+[node name="BasePickup" type="Area2D"]
+monitorable = false
+script = ExtResource("1_tk1r8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

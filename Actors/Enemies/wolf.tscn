@@ -67,7 +67,7 @@ size = Vector2(167, 22)
 size = Vector2(14, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1qba"]
-size = Vector2(15.25, 4)
+size = Vector2(16.125, 4)
 
 [sub_resource type="Animation" id="Animation_jwwre"]
 length = 0.001
@@ -287,8 +287,7 @@ move_speed = 100.0
 sprite_frames = SubResource("SpriteFrames_v1o35")
 animation = &"Run"
 autoplay = "Run"
-frame = 5
-frame_progress = 0.321178
+frame_progress = 0.0115728
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -307,7 +306,6 @@ shape = SubResource("RectangleShape2D_kfj2k")
 debug_color = Color(0, 1, 0, 0.419608)
 
 [node name="HitBoxComponet" parent="." instance=ExtResource("3_req6p")]
-visible = false
 collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]
@@ -317,7 +315,6 @@ shape = SubResource("RectangleShape2D_673g4")
 debug_color = Color(0.992157, 0, 0, 0.419608)
 
 [node name="HurtBoxComponent" parent="." instance=ExtResource("4_iyd2f")]
-visible = false
 collision_mask = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
