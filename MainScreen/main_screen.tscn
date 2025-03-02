@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=3 uid="uid://dnsfwu2l6ng5q"]
+
+[ext_resource type="Script" path="res://MainScreen/main_screen.gd" id="1_0gvic"]
+[ext_resource type="PackedScene" uid="uid://d0ljx0jvne3nb" path="res://Levels/level.tscn" id="2_4dgpp"]
+[ext_resource type="PackedScene" uid="uid://ud1wr6r285dd" path="res://Background/Main_background.tscn" id="2_bp2wa"]
+[ext_resource type="Texture2D" uid="uid://b3skvvieqragw" path="res://Assets/Sprites/HUD/CavernGuy.png" id="3_bx80t"]
+[ext_resource type="Texture2D" uid="uid://0ot5gri7k2ms" path="res://Assets/Sprites/HUD/CavernGuyE.png" id="4_15vw6"]
+[ext_resource type="PackedScene" uid="uid://df1vv7tp5crqg" path="res://MainScreen/fader.tscn" id="5_r10kr"]
+
+[sub_resource type="Animation" id="Animation_b2wwp"]
+resource_name = "Intro"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Prompt:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.0666667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(296, -400), Vector2(296.5, 170)]
+}
+
+[sub_resource type="Animation" id="Animation_tna0h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Prompt:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24.5, -300)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3vlmn"]
+_data = {
+"Intro": SubResource("Animation_b2wwp"),
+"RESET": SubResource("Animation_tna0h")
+}
+
+[node name="MainScreen" type="Node2D"]
+script = ExtResource("1_0gvic")
+next_level = ExtResource("2_4dgpp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 410)
+zoom = Vector2(1.5, 1.5)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="MainBackground" parent="." instance=ExtResource("2_bp2wa")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Title" type="TextureRect" parent="CanvasLayer"]
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -615.5
+offset_top = -660.0
+offset_right = 71.5
+offset_bottom = -316.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_bx80t")
+expand_mode = 5
+
+[node name="Prompt" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_direction = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -220.0
+offset_right = 128.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_15vw6")
+stretch_mode = 4
+
+[node name="Fader" parent="CanvasLayer" instance=ExtResource("5_r10kr")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3vlmn")
+}
+autoplay = "Intro"

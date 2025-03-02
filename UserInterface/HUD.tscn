@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://hnc447ut7lc0" path="res://Assets/Sprites/Items/gem/gemUI-3.png" id="4_7kecw"]
 [ext_resource type="Texture2D" uid="uid://cw41k0x7gb2ig" path="res://Assets/Sprites/Items/gem/gemUI-4.png" id="5_5tw8t"]
 [ext_resource type="Texture2D" uid="uid://hi8hghd7f7rr" path="res://Assets/Sprites/Items/gem/gemUI-5.png" id="6_u8nr0"]
-[ext_resource type="FontFile" uid="uid://dgib2ynmwa3l5" path="res://Assets/Others/MinimalPixel v2.ttf" id="7_72jr4"]
+[ext_resource type="FontFile" uid="uid://cn2wb6pkgc1u5" path="res://Assets/Others/aesymatt.ttf" id="8_604fl"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_au4xk"]
 frames = 5
@@ -24,8 +24,8 @@ frame_4/duration = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqfxn"]
 line_spacing = 0.0
-font = ExtResource("7_72jr4")
-font_size = 48
+font = ExtResource("8_604fl")
+font_size = 55
 font_color = Color(0, 0, 0, 1)
 outline_size = 8
 
@@ -33,11 +33,13 @@ outline_size = 8
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -189.0
-offset_bottom = 112.0
+offset_left = -223.0
+offset_right = 1.0
+offset_bottom = 145.0
 grow_horizontal = 0
 script = ExtResource("1_46ue2")
 health_icon = ExtResource("1_4u8p6")
+metadata/_edit_vertical_guides_ = [1098.0]
 
 [node name="HealthBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -61,14 +63,13 @@ size_flags_vertical = 3
 layout_direction = 3
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
 texture = SubResource("AnimatedTexture_au4xk")
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="CoinContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 8
+size_flags_vertical = 1
 text = "0"
 label_settings = SubResource("LabelSettings_sqfxn")
-horizontal_alignment = 1
-vertical_alignment = 1

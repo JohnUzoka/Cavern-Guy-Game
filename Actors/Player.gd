@@ -19,11 +19,15 @@ const MAX_HEALTH = 3
 # Player's current health.
 var player_health: int = 3  
 
-var damage_taken: bool = false
+# Tracks if the player has recently taken damage to prevent multiple hits in quick succession.
+var damage_taken: bool = false  
 
-var start_position: Vector2
+# Stores the player's initial spawn position for respawning.
+var start_position: Vector2  
 
+# Called when the node is added to the scene.
 func _ready():
+	# Save the player's starting position for future respawns.
 	start_position = global_position
 
 # Runs every physics frame to handle movement, gravity, and animations.
@@ -65,25 +69,46 @@ func update_facing_direction() -> void:
 	elif velocity.x < 0:
 		animated_sprite_2d.flip_h = true  # Facing left
 		
-# Function to handle player damage.
+# Handles player taking damage.
 func take_damage(damage_amount, body) -> void:
+	# Prevents taking damage multiple times in quick succession.
 	if not damage_taken:
+		# Temporarily disable physics processing.
 		set_physics_process(false)
+
+		# Play damage animation.
 		animated_sprite_2d.play("Hit")
+
+		# Reduce player health.
 		var old_health = player_health
 		player_health -= damage_amount
-		damage_taken = not damage_taken
+		damage_taken = true  # Prevent further damage until recovery.
+
+		# Emit a signal to update the UI with the new health value.
 		Event.emit_signal("heath_changed", old_health, player_health, MAX_HEALTH)
+
+		# If the player is still alive, start the revive timer.
 		if player_health > 0:
 			$ReviveTimer.start()
 
+# Grants the player extra health (e.g., from power-ups).
 func extra_life(value) -> void:
 	var old_health = player_health
 	player_health += value
+
+	# Emit a signal to update the UI with the new health value.
 	Event.emit_signal("health_changed", old_health, player_health, MAX_HEALTH)
 
+# Handles player respawning after a short delay.
 func _on_revive_timer_timeout() -> void:
+	# Reset the player's position to the starting point.
 	global_position = start_position
+
+	# Reset animation to "Idle".
 	animated_sprite_2d.play("Idle")
+
+	# Allow the player to take damage again.
 	damage_taken = false
+
+	# Re-enable physics processing.
 	set_physics_process(true)
