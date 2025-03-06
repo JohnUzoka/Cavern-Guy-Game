@@ -1,2 +1,2 @@
 # Cavern Guy Game
- 2d mobile platformer made in the Godot engine. Project made to learn Godot
+ 2d platformer game made in the Godot engine. Project made to learn Godot
