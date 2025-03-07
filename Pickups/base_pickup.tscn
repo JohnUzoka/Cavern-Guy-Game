@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dahyxxvxrlgtf"]
 
-[ext_resource type="Script" path="res://Pickups/base_pickup.gd" id="1_tk1r8"]
+[ext_resource type="Script" uid="uid://x1o4i80gtjgl" path="res://Pickups/base_pickup.gd" id="1_tk1r8"]
 
 [node name="BasePickup" type="Area2D"]
 monitorable = false

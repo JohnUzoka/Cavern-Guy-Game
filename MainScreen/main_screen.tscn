@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dnsfwu2l6ng5q"]
 
-[ext_resource type="Script" path="res://MainScreen/main_screen.gd" id="1_0gvic"]
+[ext_resource type="Script" uid="uid://daqq4kkau38i" path="res://MainScreen/main_screen.gd" id="1_0gvic"]
 [ext_resource type="PackedScene" uid="uid://d0ljx0jvne3nb" path="res://Levels/level.tscn" id="2_4dgpp"]
 [ext_resource type="PackedScene" uid="uid://ud1wr6r285dd" path="res://Background/Main_background.tscn" id="2_bp2wa"]
 [ext_resource type="Texture2D" uid="uid://b3skvvieqragw" path="res://Assets/Sprites/HUD/CavernGuy.png" id="3_bx80t"]
@@ -64,8 +64,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3vlmn"]
 _data = {
-"Intro": SubResource("Animation_b2wwp"),
-"RESET": SubResource("Animation_tna0h")
+&"Intro": SubResource("Animation_b2wwp"),
+&"RESET": SubResource("Animation_tna0h")
 }
 
 [node name="MainScreen" type="Node2D"]
