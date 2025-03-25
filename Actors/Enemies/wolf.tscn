@@ -339,7 +339,7 @@ hit_from_inside = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_4j4i5")
+&"": SubResource("AnimationLibrary_4j4i5")
 }
 
 [connection signal="chase_began" from="AttackBoxComponent" to="." method="_on_attack_box_component_chase_began"]
