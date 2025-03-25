@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://d0ljx0jvne3nb"]
+[gd_scene load_steps=27 format=4 uid="uid://d0ljx0jvne3nb"]
 
 [ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="1_fi5ny"]
 [ext_resource type="Texture2D" uid="uid://qdc60ao460wl" path="res://Assets/Sprites/Tiles/props1.png" id="1_mgyeg"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ud1wr6r285dd" path="res://Background/Main_background.tscn" id="13_bipai"]
 [ext_resource type="PackedScene" uid="uid://jkxm5tlvonee" path="res://Pickups/coin.tscn" id="13_pxsij"]
 [ext_resource type="PackedScene" uid="uid://reynpnfkyebo" path="res://Actors/Enemies/wolf.tscn" id="14_p1e5d"]
+[ext_resource type="PackedScene" uid="uid://c81bktgliehgf" path="res://Levels/easy_level.tscn" id="15_sh7yw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pvsrc"]
 
@@ -9828,3 +9829,6 @@ position = Vector2(472, 448)
 
 [node name="Coin" parent="." instance=ExtResource("13_pxsij")]
 position = Vector2(614, 449)
+
+[node name="EasyLevel" parent="." instance=ExtResource("15_sh7yw")]
+position = Vector2(110, 364)

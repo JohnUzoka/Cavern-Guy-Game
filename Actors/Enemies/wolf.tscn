@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://reynpnfkyebo"]
 
-[ext_resource type="Script" uid="uid://gb6hbc50e1ym" path="res://Actors/Enemies/wolf.gd" id="1_de5dw"]
+[ext_resource type="Script" path="res://Actors/Enemies/wolf.gd" id="1_de5dw"]
 [ext_resource type="Texture2D" uid="uid://bjs47to4yduvx" path="res://Assets/Sprites/Characters/Wolf/Wolf_White_Run.png" id="1_m7imw"]
 [ext_resource type="PackedScene" uid="uid://uuayf7hp7hog" path="res://Components/attack_box_component.tscn" id="2_fhprw"]
 [ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="3_req6p"]
@@ -273,9 +273,9 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4j4i5"]
 _data = {
-&"RESET": SubResource("Animation_jwwre"),
-&"move_left": SubResource("Animation_6ry6s"),
-&"move_right": SubResource("Animation_bbuki")
+"RESET": SubResource("Animation_jwwre"),
+"move_left": SubResource("Animation_6ry6s"),
+"move_right": SubResource("Animation_bbuki")
 }
 
 [node name="Wolf" type="CharacterBody2D"]

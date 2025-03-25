@@ -1,7 +1,7 @@
 [gd_scene load_steps=40 format=3 uid="uid://diuwtepkf5s"]
 
 [ext_resource type="Texture2D" uid="uid://d4jr8uxmchq0y" path="res://Assets/Sprites/Characters/guy/mid air.png" id="1_3yc10"]
-[ext_resource type="Script" uid="uid://c8wsamo4b03cj" path="res://Actors/Player.gd" id="1_81sed"]
+[ext_resource type="Script" path="res://Actors/Player.gd" id="1_81sed"]
 [ext_resource type="Texture2D" uid="uid://ccboynqixiv8v" path="res://Assets/Sprites/Characters/guy/hit.png" id="2_80y81"]
 [ext_resource type="Texture2D" uid="uid://cl3vv0gn0ou2o" path="res://Assets/Sprites/Characters/guy/idle.png" id="2_n1qit"]
 [ext_resource type="Texture2D" uid="uid://b6c3j4t1menj0" path="res://Assets/Sprites/Characters/guy/jump.png" id="3_dhgri"]
