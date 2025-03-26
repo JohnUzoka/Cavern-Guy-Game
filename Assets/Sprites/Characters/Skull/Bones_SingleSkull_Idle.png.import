@@ -2,15 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-path="res://.godot/imported/Bat_Fly.png-cdb2972c7975716cbfe64e271637d0b6.ctex"
+uid="uid://cwsc3m6cbauru"
+path="res://.godot/imported/Bones_SingleSkull_Idle.png-260617f7f4b9fda4a9ad50fea5821f05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Bat/Bat_Fly.png"
-dest_files=["res://.godot/imported/Bat_Fly.png-cdb2972c7975716cbfe64e271637d0b6.ctex"]
+source_file="res://Assets/Sprites/Characters/Skull/Bones_SingleSkull_Idle.png"
+dest_files=["res://.godot/imported/Bones_SingleSkull_Idle.png-260617f7f4b9fda4a9ad50fea5821f05.ctex"]
 
 [params]
 
