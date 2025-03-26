@@ -64,10 +64,10 @@ height = 36.0
 size = Vector2(167, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_673g4"]
-size = Vector2(14, 36)
+size = Vector2(12, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1qba"]
-size = Vector2(16.125, 4)
+size = Vector2(16.125, 6)
 
 [sub_resource type="Animation" id="Animation_jwwre"]
 length = 0.001

@@ -238,6 +238,9 @@ height = 28.0
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_81sed")
+jump_impulse = 250.0
+move_speed = 150.0
+gravity = 500.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-9, -17)
