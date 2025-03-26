@@ -1,11 +1,17 @@
 extends Node
 
-@export var scenes: Array[PackedScene]
+# Array of scene paths to choose from
+@export var scenes_to_spawn: Array[PackedScene]
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	if scenes.size() > 0:
-		var random_scene = scenes.pick_random()
+func _ready():
+	# Check if there are any scenes in the array
+	if scenes_to_spawn.size() > 0:
+		# Get a random index
+		var random_index = randi() % scenes_to_spawn.size()
+		# Get the random scene
+		var random_scene = scenes_to_spawn[random_index]
+		
+		# Instance the scene
 		var scene_instance = random_scene.instantiate()
-		var parent = get_parent()
-		parent.add_child(scene_instance)
+		# Add it as a child
+		add_child(scene_instance)

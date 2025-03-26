@@ -1,9 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c81bktgliehgf"]
+[gd_scene load_steps=2 format=3 uid="uid://c81bktgliehgf"]
 
-[ext_resource type="Script" path="res://Levels/level_manager.gd" id="1_ksaj5"]
-[ext_resource type="PackedScene" uid="uid://b6wktmm1jv2w8" path="res://Actors/Enemies/slime.tscn" id="2_sa40r"]
-[ext_resource type="PackedScene" uid="uid://reynpnfkyebo" path="res://Actors/Enemies/wolf.tscn" id="3_iowwn"]
+[ext_resource type="Script" uid="uid://cnrac6hchd7af" path="res://Levels/level_manager.gd" id="1_ksaj5"]
 
 [node name="EasyLevel" type="Node2D"]
 script = ExtResource("1_ksaj5")
-scenes = Array[PackedScene]([ExtResource("2_sa40r"), ExtResource("3_iowwn")])

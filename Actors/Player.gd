@@ -10,6 +10,9 @@ signal game_over
 # Defines the force applied when the player jumps.
 @export var jump_impulse: float = 170.0  
 
+# falling sped multiplier
+@export var fall_multiplier = 3.5
+
 # Stores a reference to the player's animated sprite.
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D  
 
@@ -25,6 +28,12 @@ var damage_taken: bool = false
 # Stores the player's initial spawn position for respawning.
 var start_position: Vector2  
 
+# Time window to allow jump after leaving the ground
+var jump_buffer_time = 0.2  
+
+# Timer for the jump buffer
+var jump_buffer_counter = 0.0  
+
 # Called when the node is added to the scene.
 func _ready():
 	# Save the player's starting position for future respawns.
@@ -34,20 +43,37 @@ func _ready():
 func _physics_process(delta):  
 	# Gets input direction (-1 for left, 1 for right, 0 if no input).
 	var direction = Input.get_axis("move_left", "move_right")  
-
+	velocity.y = min(velocity.y, 600)
+	
+	# Makes the player jump if the jump button is pressed and they are on the floor.
+	# Jump buffer logic
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y -= jump_impulse
+		jump_buffer_counter = 0.0  # Reset buffer if we jump
+	elif Input.is_action_just_pressed("jump"):
+		jump_buffer_counter = jump_buffer_time  # Start the jump buffer countdown
+		
 	# Applies gravity when the player is not on the floor.
 	if not is_on_floor():
-		velocity.y += gravity * delta  
-
+		delay_physics_frames(10)
+		if velocity.y > 0:
+			velocity.y += gravity * 3.5 * delta
+		else:
+			velocity.y += gravity * delta
 		# Plays the "MidAir" animation when falling, and "Jump" when moving upward.
 		animated_sprite_2d.play("MidAir" if velocity.y > 0 else "Jump")  
 	else:
 		# Plays "Run" animation if moving, otherwise plays "Idle".
 		animated_sprite_2d.play("Run" if direction else "Idle")  
 
-	# Makes the player jump if the jump button is pressed and they are on the floor.
-	if Input.is_action_just_pressed("jump") and is_on_floor():  
-		velocity.y -= jump_impulse
+
+
+	# Use jump buffer if within allowed time
+	if jump_buffer_counter > 0.0:
+		jump_buffer_counter -= delta  # Count down the buffer time
+		if is_on_floor():  # If the player touches the floor, make them jump
+			velocity.y -= jump_impulse
+			jump_buffer_counter = 0.0  # Reset buffer after jumping
 
 	# Moves the player left or right based on input.
 	if direction:
@@ -112,3 +138,7 @@ func _on_revive_timer_timeout() -> void:
 
 	# Re-enable physics processing.
 	set_physics_process(true)
+
+func delay_physics_frames(frame_count: int):
+	for i in range(frame_count):
+		await get_tree().physics_frame

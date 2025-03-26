@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://b6wktmm1jv2w8"]
 
-[ext_resource type="Script" path="res://Actors/Enemies/slime.gd" id="1_6hbqt"]
+[ext_resource type="Script" uid="uid://d3yw2agoxgcbw" path="res://Actors/Enemies/slime.gd" id="1_6hbqt"]
 [ext_resource type="Texture2D" uid="uid://cvpioue8ocknt" path="res://Assets/Sprites/Characters/slime-spiked/Slime_Spiked_Jump.png" id="1_unssf"]
 [ext_resource type="Texture2D" uid="uid://8x7s8dpmnv5y" path="res://Assets/Sprites/Characters/slime-spiked/Slime_Spiked_Idle.png" id="2_huv8k"]
 [ext_resource type="PackedScene" uid="uid://uuayf7hp7hog" path="res://Components/attack_box_component.tscn" id="3_3ydf0"]
@@ -102,11 +102,11 @@ size = Vector2(11, 23)
 radius = 62.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hurnp"]
-size = Vector2(19.5, 10)
+size = Vector2(19.5, 9)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vwgw"]
 radius = 4.0
-height = 20.0
+height = 22.0
 
 [node name="Slime" type="CharacterBody2D"]
 collision_layer = 4
@@ -137,7 +137,7 @@ debug_color = Color(0, 1, 0, 0.419608)
 collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponet"]
-position = Vector2(0, 11)
+position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_hurnp")
 debug_color = Color(1, 0, 0, 0.419608)
 
@@ -145,7 +145,7 @@ debug_color = Color(1, 0, 0, 0.419608)
 collision_mask = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
-position = Vector2(0, 6)
+position = Vector2(0, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_2vwgw")
 debug_color = Color(1, 0, 1, 0.419608)
