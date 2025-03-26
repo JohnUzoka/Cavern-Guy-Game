@@ -9811,8 +9811,6 @@ texture_repeat = 2
 position = Vector2(17, 327)
 disable_mode = 1
 jump_impulse = 250.0
-move_speed = 150.0
-gravity = 500.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
