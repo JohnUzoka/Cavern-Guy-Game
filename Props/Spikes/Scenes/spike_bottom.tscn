@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://crm3ikdop8fpd"]
 
-[ext_resource type="PackedScene" uid="uid://voskiqvwqfpo" path="res://Props/Spikes/base_spike.tscn" id="1_pygfh"]
+[ext_resource type="PackedScene" uid="uid://voskiqvwqfpo" path="res://Props/Spikes/Scenes/base_spike.tscn" id="1_pygfh"]
 [ext_resource type="Texture2D" uid="uid://c3l2a4m0lv71s" path="res://Assets/Sprites/props/spikes.png" id="2_mrn18"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eeg5o"]
