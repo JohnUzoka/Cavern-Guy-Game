@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://8ktjydo1rakd"]
+
+[ext_resource type="Texture2D" uid="uid://cwsc3m6cbauru" path="res://Assets/Sprites/Characters/Skull/Bones_SingleSkull_Idle.png" id="1_cp4ch"]
+[ext_resource type="Script" uid="uid://oq6kf0lyy7ll" path="res://Actors/Enemies/skull_path.gd" id="1_fpg7m"]
+[ext_resource type="Script" uid="uid://cpyx44iiyfqr0" path="res://Components/hit_box_componet.gd" id="2_fpg7m"]
+[ext_resource type="Script" uid="uid://dsrovhdpuvipo" path="res://Actors/Enemies/skull.gd" id="2_np4qj"]
+
+[sub_resource type="Curve2D" id="Curve2D_cp4ch"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 59, 0)
+}
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3lrff"]
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np4qj"]
+atlas = ExtResource("1_cp4ch")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f4kx"]
+atlas = ExtResource("1_cp4ch")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hjsr"]
+atlas = ExtResource("1_cp4ch")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4bu7"]
+atlas = ExtResource("1_cp4ch")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwx8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np4qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f4kx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hjsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4bu7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qps7f"]
+radius = 6.0
+
+[node name="SkullPath" type="Path2D"]
+curve = SubResource("Curve2D_cp4ch")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-1, 0)
+loop = false
+script = ExtResource("1_fpg7m")
+
+[node name="Skull" type="CharacterBody2D" parent="PathFollow2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("2_np4qj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Skull"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_3lrff")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/Skull"]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_hwx8a")
+autoplay = "default"
+frame_progress = 0.0905759
+
+[node name="HitBox" type="Area2D" parent="PathFollow2D/Skull"]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("2_fpg7m")
+metadata/_custom_type_script = "uid://cpyx44iiyfqr0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Skull/HitBox"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_qps7f")
+debug_color = Color(0.999655, 0, 0.105834, 0.42)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://d0ljx0jvne3nb"]
+[gd_scene load_steps=29 format=4 uid="uid://d0ljx0jvne3nb"]
 
 [ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="1_fi5ny"]
 [ext_resource type="Texture2D" uid="uid://qdc60ao460wl" path="res://Assets/Sprites/Tiles/props1.png" id="1_mgyeg"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://reynpnfkyebo" path="res://Actors/Enemies/wolf.tscn" id="14_p1e5d"]
 [ext_resource type="PackedScene" uid="uid://c81bktgliehgf" path="res://Levels/easy_level.tscn" id="15_sh7yw"]
 [ext_resource type="PackedScene" uid="uid://cu5qisaeh4c6s" path="res://Levels/level_1.tscn" id="16_vmy0u"]
+[ext_resource type="PackedScene" uid="uid://8ktjydo1rakd" path="res://Actors/Enemies/skull-enemy.tscn" id="17_jjxhf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pvsrc"]
 
@@ -9810,7 +9811,6 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(17, 327)
 disable_mode = 1
-jump_impulse = 250.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -9832,3 +9832,6 @@ position = Vector2(614, 449)
 [node name="EasyLevel" parent="." instance=ExtResource("15_sh7yw")]
 position = Vector2(0, 648)
 scenes_to_spawn = Array[PackedScene]([ExtResource("16_vmy0u")])
+
+[node name="SkullPath" parent="." instance=ExtResource("17_jjxhf")]
+position = Vector2(101, 358)
