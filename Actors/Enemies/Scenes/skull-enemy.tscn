@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://8ktjydo1rakd"]
+[gd_scene load_steps=12 format=3 uid="uid://8ktjydo1rakd"]
 
 [ext_resource type="Texture2D" uid="uid://cwsc3m6cbauru" path="res://Assets/Sprites/Characters/Skull/Bones_SingleSkull_Idle.png" id="1_cp4ch"]
-[ext_resource type="Script" uid="uid://oq6kf0lyy7ll" path="res://Actors/Enemies/skull_path.gd" id="1_fpg7m"]
+[ext_resource type="Script" uid="uid://oq6kf0lyy7ll" path="res://Actors/Enemies/Scripts/enemy_path.gd" id="1_fpg7m"]
 [ext_resource type="Script" uid="uid://cpyx44iiyfqr0" path="res://Components/hit_box_componet.gd" id="2_fpg7m"]
-[ext_resource type="Script" uid="uid://dsrovhdpuvipo" path="res://Actors/Enemies/skull.gd" id="2_np4qj"]
 
 [sub_resource type="Curve2D" id="Curve2D_cp4ch"]
 _data = {
@@ -64,7 +63,6 @@ script = ExtResource("1_fpg7m")
 [node name="Skull" type="CharacterBody2D" parent="PathFollow2D"]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("2_np4qj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Skull"]
 position = Vector2(0, 1)
