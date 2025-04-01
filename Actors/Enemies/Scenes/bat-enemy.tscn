@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyxhotcskawr2"]
+
+[ext_resource type="Script" uid="uid://oq6kf0lyy7ll" path="res://Actors/Enemies/Scripts/enemy_path.gd" id="1_vrreb"]
+[ext_resource type="Texture2D" uid="uid://hqhc2620uhoq" path="res://Assets/Sprites/Characters/Bat/Bat_Fly.png" id="3_vrreb"]
+[ext_resource type="Script" uid="uid://cpyx44iiyfqr0" path="res://Components/hit_box_componet.gd" id="4_1fx3f"]
+
+[sub_resource type="Curve2D" id="Curve2D_cp4ch"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -34)
+}
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3lrff"]
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw7ii"]
+atlas = ExtResource("3_vrreb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epy43"]
+atlas = ExtResource("3_vrreb")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fx3f"]
+atlas = ExtResource("3_vrreb")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp8fo"]
+atlas = ExtResource("3_vrreb")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hwx8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw7ii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epy43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fx3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp8fo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qps7f"]
+radius = 6.0
+
+[node name="SkullPath" type="Path2D"]
+curve = SubResource("Curve2D_cp4ch")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
+loop = false
+script = ExtResource("1_vrreb")
+
+[node name="Bat" type="CharacterBody2D" parent="PathFollow2D"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Bat"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_3lrff")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/Bat"]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_hwx8a")
+autoplay = "default"
+frame_progress = 0.127231
+
+[node name="HitBox" type="Area2D" parent="PathFollow2D/Bat"]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("4_1fx3f")
+metadata/_custom_type_script = "uid://cpyx44iiyfqr0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Bat/HitBox"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_qps7f")
+debug_color = Color(0.999655, 0, 0.105834, 0.42)
