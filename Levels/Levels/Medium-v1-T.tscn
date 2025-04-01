@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://lybefx8tl144"]
 
-[ext_resource type="TileSet" uid="uid://ddq38g7uya4ph" path="res://Assets/Others/Tileset.tres" id="1_p177d"]
+[ext_resource type="TileSet" uid="uid://ddq38g7uya4ph" path="res://Assets/Others/TileSet.tres" id="1_p177d"]
 [ext_resource type="PackedScene" uid="uid://crm3ikdop8fpd" path="res://Props/Spikes/Scenes/spike_bottom.tscn" id="2_h5s71"]
 [ext_resource type="PackedScene" uid="uid://c0ovofh8ppr24" path="res://Props/Spikes/Scenes/spike_skull.tscn" id="4_dbq32"]
 [ext_resource type="PackedScene" uid="uid://cyxhotcskawr2" path="res://Actors/Enemies/Scenes/bat-enemy.tscn" id="4_h5s71"]
