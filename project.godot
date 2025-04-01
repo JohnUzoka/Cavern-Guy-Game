@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Cavern Guy"
-run/main_scene="res://Levels/level.tscn"
-config/features=PackedStringArray("4.4", "Mobile")
+run/main_scene="uid://cd7cjic01a475"
+config/features=PackedStringArray("4.4")
 config/icon="res://icon.svg"
 
 [autoload]

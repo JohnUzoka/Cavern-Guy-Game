@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cd7cjic01a475"]
+[gd_scene load_steps=4 format=3 uid="uid://cd7cjic01a475"]
 
 [ext_resource type="Theme" uid="uid://do028hgte438v" path="res://UserInterface/kenneyUI.tres" id="1_sec7u"]
+[ext_resource type="Script" uid="uid://dfcb3suh1wlda" path="res://UserInterface/main_menu.gd" id="2_8wsr7"]
+[ext_resource type="PackedScene" uid="uid://d0ljx0jvne3nb" path="res://Levels/level.tscn" id="3_xvdes"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,6 +12,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_sec7u")
+script = ExtResource("2_8wsr7")
+starting_scene = ExtResource("3_xvdes")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -32,6 +36,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="Play" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Play"
 
@@ -40,5 +45,6 @@ layout_mode = 2
 text = "Options"
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
