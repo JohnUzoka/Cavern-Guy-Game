@@ -16,6 +16,9 @@ signal game_over
 # Stores a reference to the player's animated sprite.
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D  
 
+#area for rope grab interaction
+@onready var interaction_area: Area2D = $InteractionArea
+
 # Maximum health the player can have.
 const MAX_HEALTH = 3  
 
@@ -24,6 +27,10 @@ var player_health: int = 3
 
 # Tracks if the player has recently taken damage to prevent multiple hits in quick succession.
 var damage_taken: bool = false  
+
+# Tracks if player is grabbing a rope
+var grabbing_rope: bool = false
+
 
 # Stores the player's initial spawn position for respawning.
 var start_position: Vector2  
@@ -41,6 +48,11 @@ func _ready():
 
 # Runs every physics frame to handle movement, gravity, and animations.
 func _physics_process(delta):  
+	if grabbing_rope:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+	
 	# Gets input direction (-1 for left, 1 for right, 0 if no input).
 	var direction = Input.get_axis("move_left", "move_right")  
 	velocity.y = min(velocity.y, 400)
@@ -140,5 +152,14 @@ func _on_revive_timer_timeout() -> void:
 	set_physics_process(true)
 
 func delay_physics_frames(frame_count: int):
-	for i in range(frame_count):
-		await get_tree().physics_frame
+		if grabbing_rope == false:
+			for i in range(frame_count):
+				await get_tree().physics_frame
+
+func _on_interaction_area_entered():
+	if not is_on_floor():
+		grabbing_rope = true
+		velocity = Vector2.ZERO
+		animated_sprite_2d.play("Grab")
+		await animated_sprite_2d.animation_finished
+		animated_sprite_2d.play("GrabIdle")

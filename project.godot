@@ -55,8 +55,10 @@ jump={
 2d_physics/layer_4="Danger"
 2d_physics/layer_5="PlayerHitBox"
 2d_physics/layer_6="EnemyHitBox"
+2d_physics/layer_7="Rope"
+2d_physics/layer_8="Grabber"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=3
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"

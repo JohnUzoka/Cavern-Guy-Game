@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://c8e0csjn2rs1c"]
+
+[ext_resource type="Script" uid="uid://dkaj8iy7l8j6i" path="res://Props/rope.gd" id="1_iwwcy"]
+[ext_resource type="FontFile" uid="uid://cn2wb6pkgc1u5" path="res://Assets/Others/aesymatt.ttf" id="2_bsqsk"]
+[ext_resource type="PackedScene" uid="uid://ci4hbivv3t7rj" path="res://UserInterface/end-game.tscn" id="2_wkt07"]
+[ext_resource type="Texture2D" uid="uid://b428ouy5kmabi" path="res://Assets/Sprites/props/rope1.png" id="3_wkt07"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwwcy"]
+font = ExtResource("2_bsqsk")
+font_size = 40
+font_color = Color(0.623529, 1, 1, 0.541176)
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_iwwcy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-134.384, -7.35939)]
+}
+
+[sub_resource type="Animation" id="Animation_bsqsk"]
+resource_name = "textbounce"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-134.384, -7.35939), Vector2(-134.384, -9.32736), Vector2(-134.384, -7.35939)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wkt07"]
+_data = {
+&"RESET": SubResource("Animation_iwwcy"),
+&"textbounce": SubResource("Animation_bsqsk")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bsqsk"]
+size = Vector2(5.12984, 52.5778)
+
+[node name="Rope" type="Area2D"]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("1_iwwcy")
+target_scene = ExtResource("2_wkt07")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.391715, 1.49647)
+texture = ExtResource("3_wkt07")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -3.313
+anchor_right = -3.313
+offset_left = -134.384
+offset_top = -9.32736
+offset_right = 162.616
+offset_bottom = 32.6726
+scale = Vector2(0.4, 0.4)
+text = "EXIT WITH LOOT"
+label_settings = SubResource("LabelSettings_iwwcy")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wkt07")
+}
+autoplay = "textbounce"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.28892)
+shape = SubResource("RectangleShape2D_bsqsk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
