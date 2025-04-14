@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ci4hbivv3t7rj"]
+[gd_scene load_steps=16 format=3 uid="uid://ci4hbivv3t7rj"]
 
 [ext_resource type="Script" uid="uid://dvcxqygxo8jt4" path="res://UserInterface/end_game.gd" id="1_00k4h"]
 [ext_resource type="Texture2D" uid="uid://ci8cnmb7og8jh" path="res://Assets/Sprites/Items/gem/gemUI-1.png" id="1_61scl"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://hi8hghd7f7rr" path="res://Assets/Sprites/Items/gem/gemUI-5.png" id="5_pplhw"]
 [ext_resource type="FontFile" uid="uid://cn2wb6pkgc1u5" path="res://Assets/Others/aesymatt.ttf" id="6_g1jt0"]
 [ext_resource type="Theme" uid="uid://do028hgte438v" path="res://UserInterface/kenneyUI.tres" id="7_6xg0b"]
+[ext_resource type="Texture2D" uid="uid://i5u78v0oa37y" path="res://Assets/Others/GameOver.png" id="9_o5fgq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3eerv"]
 line_spacing = 0.0
@@ -33,6 +34,115 @@ frame_4/duration = 1.0
 font = ExtResource("6_g1jt0")
 font_size = 40
 font_color = Color(0.478431, 0.478431, 0.478431, 0.407843)
+
+[sub_resource type="Animation" id="Animation_y6jqx"]
+resource_name = "Title"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, -50), Vector2(640, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer2/CoinContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer2/OptionsContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Credits:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pplhw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer2/CoinContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer2/OptionsContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Credits:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g1jt0"]
+_data = {
+&"RESET": SubResource("Animation_pplhw"),
+&"Title": SubResource("Animation_y6jqx")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -67,6 +177,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CoinContainer" type="HBoxContainer" parent="VBoxContainer2"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
@@ -96,6 +207,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="OptionsContainer" type="VBoxContainer" parent="VBoxContainer2"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 alignment = 1
@@ -120,20 +232,23 @@ theme = ExtResource("7_6xg0b")
 theme_override_font_sizes/font_size = 21
 text = "Quit"
 
-[node name="Label" type="Label" parent="."]
+[node name="Credits" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -359.0
-offset_right = 957.0
-offset_bottom = 538.0
+offset_top = -377.0
+offset_right = 1263.0
+offset_bottom = 565.0
 grow_vertical = 0
 scale = Vector2(0.4, 0.4)
 theme_override_font_sizes/font_size = 21
 text = "Art 
 UI: 
 - KennysUI by azagaya
+- AE Systematic à by Ænigma
+- MinimalPixel Font by Mounir Tohami
 Assets:
 - Sunny Land Pixel Game Art by ansimuz
 - Animated Heart Container In Pixel Art by TEMOK
@@ -151,3 +266,25 @@ Level Designers / Game Designers
 - Alijah Peacock
 "
 label_settings = SubResource("LabelSettings_4c6k8")
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -200.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+texture = ExtResource("9_o5fgq")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_g1jt0")
+}
+autoplay = "Title"

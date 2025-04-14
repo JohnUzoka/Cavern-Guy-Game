@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dhr7nkniu63jp" path="res://Assets/Sprites/Tiles/mainlev_build.png" id="3_mwtub"]
 [ext_resource type="PackedScene" uid="uid://c8e0csjn2rs1c" path="res://Props/rope.tscn" id="4_vmy0u"]
 [ext_resource type="PackedScene" uid="uid://c0l3n6spk6w3t" path="res://Props/sign.tscn" id="5_jjxhf"]
-[ext_resource type="TileSet" uid="uid://ddq38g7uya4ph" path="res://Assets/Others/TileSet.tres" id="7_vmy0u"]
+[ext_resource type="TileSet" uid="uid://ddq38g7uya4ph" path="res://Assets/Others/Tileset.tres" id="7_vmy0u"]
 [ext_resource type="PackedScene" uid="uid://diuwtepkf5s" path="res://Actors/player.tscn" id="9_v0v80"]
 [ext_resource type="PackedScene" uid="uid://b6wktmm1jv2w8" path="res://Actors/Enemies/Scenes/slime.tscn" id="10_exyks"]
 [ext_resource type="PackedScene" uid="uid://2acfqepdgqxl" path="res://UserInterface/HUD.tscn" id="11_rmc8n"]
@@ -4800,7 +4800,7 @@ metadata/_edit_horizontal_guides_ = [648.0]
 [node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(1338, 377)
+position = Vector2(34, 352)
 zoom = Vector2(3, 3)
 process_callback = 0
 limit_left = 0
@@ -4864,7 +4864,7 @@ tile_set = ExtResource("7_vmy0u")
 [node name="Player" parent="." instance=ExtResource("9_v0v80")]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(1338, 377)
+position = Vector2(34, 352)
 disable_mode = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]

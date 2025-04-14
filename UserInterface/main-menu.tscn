@@ -1,8 +1,70 @@
-[gd_scene load_steps=4 format=3 uid="uid://cd7cjic01a475"]
+[gd_scene load_steps=8 format=3 uid="uid://cd7cjic01a475"]
 
 [ext_resource type="Theme" uid="uid://do028hgte438v" path="res://UserInterface/kenneyUI.tres" id="1_sec7u"]
-[ext_resource type="Script" path="res://UserInterface/main_menu.gd" id="2_8wsr7"]
+[ext_resource type="Script" uid="uid://dfcb3suh1wlda" path="res://UserInterface/main_menu.gd" id="2_8wsr7"]
 [ext_resource type="PackedScene" uid="uid://d0ljx0jvne3nb" path="res://Levels/level.tscn" id="3_xvdes"]
+[ext_resource type="Texture2D" uid="uid://0aojh2ctv1ql" path="res://Assets/Others/Title.png" id="4_pbist"]
+
+[sub_resource type="Animation" id="Animation_g7g51"]
+resource_name = "Title"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, -50), Vector2(640, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pbist"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_phmxg"]
+_data = {
+&"RESET": SubResource("Animation_pbist"),
+&"Title": SubResource("Animation_g7g51")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,6 +86,22 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -200.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+texture = ExtResource("4_pbist")
+expand_mode = 2
+stretch_mode = 3
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -33,6 +111,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 
 [node name="Play" type="Button" parent="CenterContainer/VBoxContainer"]
@@ -51,3 +130,9 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 21
 text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_phmxg")
+}
+autoplay = "Title"
