@@ -43,7 +43,7 @@ func _ready():
 func _physics_process(delta):  
 	# Gets input direction (-1 for left, 1 for right, 0 if no input).
 	var direction = Input.get_axis("move_left", "move_right")  
-	velocity.y = min(velocity.y, 600)
+	velocity.y = min(velocity.y, 400)
 	
 	# Makes the player jump if the jump button is pressed and they are on the floor.
 	# Jump buffer logic
@@ -57,7 +57,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		delay_physics_frames(10)
 		if velocity.y > 0:
-			velocity.y += gravity * 3.5 * delta
+			velocity.y += gravity * fall_multiplier * delta
 		else:
 			velocity.y += gravity * delta
 		# Plays the "MidAir" animation when falling, and "Jump" when moving upward.

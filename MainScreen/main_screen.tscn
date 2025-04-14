@@ -120,6 +120,6 @@ stretch_mode = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_3vlmn")
+&"": SubResource("AnimationLibrary_3vlmn")
 }
 autoplay = "Intro"
