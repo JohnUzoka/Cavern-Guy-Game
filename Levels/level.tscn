@@ -4800,7 +4800,7 @@ metadata/_edit_horizontal_guides_ = [648.0]
 [node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(34, 352)
+position = Vector2(42, 350)
 zoom = Vector2(3, 3)
 process_callback = 0
 limit_left = 0
@@ -4864,7 +4864,7 @@ tile_set = ExtResource("7_vmy0u")
 [node name="Player" parent="." instance=ExtResource("9_v0v80")]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(34, 352)
+position = Vector2(42, 350)
 disable_mode = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
@@ -4882,7 +4882,7 @@ position = Vector2(978, 432)
 position = Vector2(646, 607)
 
 [node name="Coin" parent="." instance=ExtResource("13_pxsij")]
-position = Vector2(701, 460)
+position = Vector2(707, 458)
 
 [node name="EasyLevel" parent="." instance=ExtResource("15_sh7yw")]
 position = Vector2(0, 648)

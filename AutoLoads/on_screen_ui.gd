@@ -8,4 +8,7 @@ var total_coin: int = 0:
 	set = set_total_coin
 
 func set_total_coin(value) -> void:
-	total_coin += value
+	if value != 0:
+		total_coin += value
+	else:
+		total_coin = 0

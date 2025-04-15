@@ -19,6 +19,9 @@ signal game_over
 #area for rope grab interaction
 @onready var interaction_area: Area2D = $InteractionArea
 
+#game over scene 
+@export var target_scene: PackedScene
+
 # Maximum health the player can have.
 const MAX_HEALTH = 3  
 
@@ -128,6 +131,8 @@ func take_damage(damage_amount, body) -> void:
 		# If the player is still alive, start the revive timer.
 		if player_health > 0:
 			$ReviveTimer.start()
+		else:
+			die()
 
 # Grants the player extra health (e.g., from power-ups).
 func extra_life(value) -> void:
@@ -152,6 +157,7 @@ func _on_revive_timer_timeout() -> void:
 	set_physics_process(true)
 
 func delay_physics_frames(frame_count: int):
+	if damage_taken == true:
 		if grabbing_rope == false:
 			for i in range(frame_count):
 				await get_tree().physics_frame
@@ -163,3 +169,10 @@ func _on_interaction_area_entered():
 		animated_sprite_2d.play("Grab")
 		await animated_sprite_2d.animation_finished
 		animated_sprite_2d.play("GrabIdle")
+
+func die():
+	Event.set_total_coin(0)
+	if target_scene:
+		get_tree().change_scene_to_packed(target_scene)
+	else:
+		print("Error: No scene assigned to 'starting_scene'")
