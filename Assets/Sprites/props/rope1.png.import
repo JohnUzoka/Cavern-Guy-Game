@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6pf8tniqljdg"
-path="res://.godot/imported/Bat_Fly.png-cdb2972c7975716cbfe64e271637d0b6.ctex"
+uid="uid://b428ouy5kmabi"
+path="res://.godot/imported/rope1.png-b95b84e266b0d29eff939e8d7b3730a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Bat/Bat_Fly.png"
-dest_files=["res://.godot/imported/Bat_Fly.png-cdb2972c7975716cbfe64e271637d0b6.ctex"]
+source_file="res://Assets/Sprites/props/rope1.png"
+dest_files=["res://.godot/imported/rope1.png-b95b84e266b0d29eff939e8d7b3730a1.ctex"]
 
 [params]
 

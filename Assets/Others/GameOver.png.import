@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6pf8tniqljdg"
-path="res://.godot/imported/Bat_Fly.png-cdb2972c7975716cbfe64e271637d0b6.ctex"
+uid="uid://i5u78v0oa37y"
+path="res://.godot/imported/GameOver.png-b5663cac34d28a29ba5d3da4c9357e90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Bat/Bat_Fly.png"
-dest_files=["res://.godot/imported/Bat_Fly.png-cdb2972c7975716cbfe64e271637d0b6.ctex"]
+source_file="res://Assets/Others/GameOver.png"
+dest_files=["res://.godot/imported/GameOver.png-b5663cac34d28a29ba5d3da4c9357e90.ctex"]
 
 [params]
 

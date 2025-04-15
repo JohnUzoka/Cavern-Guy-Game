@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0l3n6spk6w3t"]
+
+[ext_resource type="Texture2D" uid="uid://bgcdf2t5802g" path="res://Assets/Sprites/props/sign.png" id="1_37x0h"]
+[ext_resource type="FontFile" uid="uid://cn2wb6pkgc1u5" path="res://Assets/Others/aesymatt.ttf" id="2_rswxu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5aj1n"]
+font = ExtResource("2_rswxu")
+font_size = 40
+font_color = Color(0.623529, 1, 1, 0.541176)
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_rswxu"]
+resource_name = "textbounce"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-18.75, -32.4759), Vector2(-20, -34.641), Vector2(-18.75, -32.476)]
+}
+
+[sub_resource type="Animation" id="Animation_5aj1n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-18.75, -32.4759), Vector2(-134.384, 12.3203)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k35ox"]
+_data = {
+&"RESET": SubResource("Animation_5aj1n"),
+&"textbounce": SubResource("Animation_rswxu")
+}
+
+[node name="Sign" type="Sprite2D"]
+rotation = 0.523599
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_37x0h")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -3.313
+anchor_right = -3.313
+offset_left = 40.884
+offset_top = -32.4759
+offset_right = 316.884
+offset_bottom = 9.52405
+rotation = -0.523599
+scale = Vector2(0.4, 0.4)
+text = "DIVE FOR MORE"
+label_settings = SubResource("LabelSettings_5aj1n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_k35ox")
+}
+autoplay = "textbounce"

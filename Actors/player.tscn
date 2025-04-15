@@ -1,14 +1,52 @@
-[gd_scene load_steps=40 format=3 uid="uid://diuwtepkf5s"]
+[gd_scene load_steps=51 format=3 uid="uid://diuwtepkf5s"]
 
 [ext_resource type="Texture2D" uid="uid://d4jr8uxmchq0y" path="res://Assets/Sprites/Characters/guy/mid air.png" id="1_3yc10"]
 [ext_resource type="Script" uid="uid://c8wsamo4b03cj" path="res://Actors/Player.gd" id="1_81sed"]
 [ext_resource type="Texture2D" uid="uid://ccboynqixiv8v" path="res://Assets/Sprites/Characters/guy/hit.png" id="2_80y81"]
 [ext_resource type="Texture2D" uid="uid://cl3vv0gn0ou2o" path="res://Assets/Sprites/Characters/guy/idle.png" id="2_n1qit"]
+[ext_resource type="Texture2D" uid="uid://c284ohsm1u2mg" path="res://Assets/Sprites/Characters/guy/ledge grab.png" id="2_tvot5"]
+[ext_resource type="Texture2D" uid="uid://c684wvu53n4hx" path="res://Assets/Sprites/Characters/guy/ledge grab idle.png" id="3_c5kq5"]
 [ext_resource type="Texture2D" uid="uid://b6c3j4t1menj0" path="res://Assets/Sprites/Characters/guy/jump.png" id="3_dhgri"]
 [ext_resource type="Texture2D" uid="uid://blkd0a63yongd" path="res://Assets/Sprites/Characters/guy/landing.png" id="4_oyeci"]
 [ext_resource type="Texture2D" uid="uid://dg3nplsf7qrf4" path="res://Assets/Sprites/Characters/guy/run.png" id="5_v7dhy"]
 [ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="7_h1j0i"]
 [ext_resource type="PackedScene" uid="uid://bej8qn5vagpqw" path="res://Components/hurt_box_component.tscn" id="8_y265q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5kq5"]
+atlas = ExtResource("2_tvot5")
+region = Rect2(0, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kbgh"]
+atlas = ExtResource("2_tvot5")
+region = Rect2(20, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sj5c"]
+atlas = ExtResource("2_tvot5")
+region = Rect2(40, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yncu"]
+atlas = ExtResource("2_tvot5")
+region = Rect2(60, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rr1ak"]
+atlas = ExtResource("2_tvot5")
+region = Rect2(80, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3drua"]
+atlas = ExtResource("2_tvot5")
+region = Rect2(100, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdpfr"]
+atlas = ExtResource("3_c5kq5")
+region = Rect2(0, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3vyt"]
+atlas = ExtResource("3_c5kq5")
+region = Rect2(20, 0, 20, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdqyl"]
+atlas = ExtResource("3_c5kq5")
+region = Rect2(40, 0, 20, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m2ql1"]
 atlas = ExtResource("2_80y81")
@@ -116,6 +154,43 @@ region = Rect2(147, 0, 21, 33)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hfx8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5kq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kbgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sj5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yncu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rr1ak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3drua")
+}],
+"loop": false,
+"name": &"Grab",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdpfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3vyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdqyl")
+}],
+"loop": true,
+"name": &"GrabIdle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m2ql1")
@@ -237,6 +312,7 @@ height = 28.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
+collision_mask = 65
 script = ExtResource("1_81sed")
 jump_impulse = 250.0
 move_speed = 150.0
@@ -245,7 +321,7 @@ gravity = 500.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-9, -17)
 sprite_frames = SubResource("SpriteFrames_2hfx8")
-animation = &"Idle"
+animation = &"Grab"
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
