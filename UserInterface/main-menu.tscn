@@ -1,9 +1,36 @@
 [gd_scene load_steps=8 format=3 uid="uid://cd7cjic01a475"]
 
 [ext_resource type="Theme" uid="uid://do028hgte438v" path="res://UserInterface/kenneyUI.tres" id="1_sec7u"]
-[ext_resource type="Script" uid="uid://dfcb3suh1wlda" path="res://UserInterface/main_menu.gd" id="2_8wsr7"]
+[ext_resource type="Script" path="res://UserInterface/main_menu.gd" id="2_8wsr7"]
 [ext_resource type="PackedScene" uid="uid://d0ljx0jvne3nb" path="res://Levels/level.tscn" id="3_xvdes"]
 [ext_resource type="Texture2D" uid="uid://0aojh2ctv1ql" path="res://Assets/Others/Title.png" id="4_pbist"]
+
+[sub_resource type="Animation" id="Animation_pbist"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_g7g51"]
 resource_name = "Title"
@@ -31,33 +58,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_pbist"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Title:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(640, 160)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CenterContainer/VBoxContainer:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_phmxg"]
