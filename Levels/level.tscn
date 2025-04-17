@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://d0ljx0jvne3nb"]
+[gd_scene load_steps=29 format=4 uid="uid://d0ljx0jvne3nb"]
 
 [ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="1_fi5ny"]
 [ext_resource type="Texture2D" uid="uid://qdc60ao460wl" path="res://Assets/Sprites/Tiles/props1.png" id="1_mgyeg"]
@@ -18,6 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://c81bktgliehgf" path="res://Levels/easy_level.tscn" id="15_sh7yw"]
 [ext_resource type="PackedScene" uid="uid://crm3ikdop8fpd" path="res://Props/Spikes/Scenes/spike_bottom.tscn" id="17_8hqpc"]
 [ext_resource type="PackedScene" uid="uid://lybefx8tl144" path="res://Levels/Levels/Medium-v1-T.tscn" id="17_lybtp"]
+[ext_resource type="PackedScene" uid="uid://duo6ia3ep1swi" path="res://Levels/LevelNewEasy-v3-Day.tscn" id="19_fw3l5"]
+[ext_resource type="PackedScene" uid="uid://fo617v2gma71" path="res://Levels/LevelMedium-v2-Day.tscn" id="21_fw3l5"]
+[ext_resource type="PackedScene" uid="uid://dxbsh51gk0r5t" path="res://Levels/level_hard_v1-D.tscn" id="21_wjjle"]
+[ext_resource type="PackedScene" uid="uid://dcwow24k31pnp" path="res://Levels/Hard-v1-T.tscn" id="22_1sae0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pvsrc"]
 
@@ -4907,12 +4911,12 @@ position = Vector2(707, 458)
 
 [node name="EasyLevel" parent="." instance=ExtResource("15_sh7yw")]
 position = Vector2(0, 648)
-scenes_to_spawn = Array[PackedScene]([ExtResource("17_lybtp")])
+scenes_to_spawn = Array[PackedScene]([ExtResource("19_fw3l5")])
 
 [node name="MediumLevel" parent="." instance=ExtResource("15_sh7yw")]
 position = Vector2(0, 1130)
-scenes_to_spawn = Array[PackedScene]([ExtResource("17_lybtp")])
+scenes_to_spawn = Array[PackedScene]([ExtResource("17_lybtp"), ExtResource("21_fw3l5")])
 
 [node name="HardLevel" parent="." instance=ExtResource("15_sh7yw")]
 position = Vector2(0, 1611)
-scenes_to_spawn = Array[PackedScene]([ExtResource("17_lybtp")])
+scenes_to_spawn = Array[PackedScene]([ExtResource("21_wjjle"), ExtResource("22_1sae0")])
