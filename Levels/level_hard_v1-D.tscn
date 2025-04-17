@@ -117,9 +117,6 @@ position = Vector2(385, 98)
 [node name="SkullPath25" parent="." instance=ExtResource("3_er22c")]
 position = Vector2(1173, 279)
 
-[node name="Coin" parent="." instance=ExtResource("8_lnmky")]
-position = Vector2(1604, 441)
-
 [node name="Heart" parent="." instance=ExtResource("9_upevf")]
 position = Vector2(511, 300)
 
@@ -245,3 +242,8 @@ position = Vector2(1240, 321)
 
 [node name="SpikeBottom35" parent="." instance=ExtResource("8_5hrhu")]
 position = Vector2(1256, 322)
+
+[node name="Coin2" parent="." instance=ExtResource("8_lnmky")]
+position = Vector2(1603, 433)
+scale = Vector2(2.3, 2.3)
+coin_value = 500
