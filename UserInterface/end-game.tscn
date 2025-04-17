@@ -219,12 +219,6 @@ theme = ExtResource("7_6xg0b")
 theme_override_font_sizes/font_size = 21
 text = "RePlay"
 
-[node name="Options" type="Button" parent="VBoxContainer2/OptionsContainer"]
-layout_mode = 2
-theme = ExtResource("7_6xg0b")
-theme_override_font_sizes/font_size = 21
-text = "Options"
-
 [node name="Quit" type="Button" parent="VBoxContainer2/OptionsContainer"]
 unique_name_in_owner = true
 layout_mode = 2

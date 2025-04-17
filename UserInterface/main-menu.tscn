@@ -120,11 +120,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 21
 text = "Play"
 
-[node name="Options" type="Button" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 21
-text = "Options"
-
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
