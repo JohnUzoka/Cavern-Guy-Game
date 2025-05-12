@@ -132,6 +132,7 @@ func take_damage(damage_amount, body) -> void:
 		if player_health > 0:
 			$ReviveTimer.start()
 		else:
+			await get_tree().create_timer(1.0).timeout
 			die()
 
 # Grants the player extra health (e.g., from power-ups).
@@ -176,3 +177,7 @@ func die():
 		get_tree().change_scene_to_packed(target_scene)
 	else:
 		print("Error: No scene assigned to 'starting_scene'")
+		
+		
+func update_checkpoint(checkpoint: Vector2):
+	start_position = checkpoint

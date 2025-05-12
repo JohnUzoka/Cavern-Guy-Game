@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://d0ljx0jvne3nb"]
+[gd_scene load_steps=33 format=4 uid="uid://bqyp77y3h8exc"]
 
 [ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="1_fi5ny"]
 [ext_resource type="Texture2D" uid="uid://qdc60ao460wl" path="res://Assets/Sprites/Tiles/props1.png" id="1_mgyeg"]
@@ -12,15 +12,20 @@
 [ext_resource type="PackedScene" uid="uid://kwttaq0rdqxj" path="res://Pickups/heart.tscn" id="12_lvi5w"]
 [ext_resource type="PackedScene" uid="uid://ud1wr6r285dd" path="res://Background/Main_background.tscn" id="13_bipai"]
 [ext_resource type="PackedScene" uid="uid://jkxm5tlvonee" path="res://Pickups/coin.tscn" id="13_pxsij"]
+[ext_resource type="PackedScene" path="res://Components/checkpoint.tscn" id="14_o8jhj"]
 [ext_resource type="PackedScene" uid="uid://c81bktgliehgf" path="res://Levels/random_level.tscn" id="15_sh7yw"]
+[ext_resource type="PackedScene" uid="uid://cp5j8idi3escl" path="res://Levels/Levels/Easy/Easy-v1-T.tscn" id="16_r2ueb"]
 [ext_resource type="PackedScene" uid="uid://crm3ikdop8fpd" path="res://Props/Spikes/Scenes/spike_bottom.tscn" id="17_8hqpc"]
-[ext_resource type="PackedScene" uid="uid://lybefx8tl144" path="res://Levels/Levels/Medium-v1-T.tscn" id="17_lybtp"]
-[ext_resource type="PackedScene" uid="uid://duo6ia3ep1swi" path="res://Levels/LevelNewEasy-v3-Day.tscn" id="19_fw3l5"]
+[ext_resource type="PackedScene" uid="uid://lybefx8tl144" path="res://Levels/Levels/Medium/Medium-v1-T.tscn" id="17_lybtp"]
+[ext_resource type="PackedScene" uid="uid://dsc1w6aqhpygm" path="res://Levels/Levels/Easy/level_easy_v_1_a.tscn" id="17_o8jhj"]
+[ext_resource type="PackedScene" uid="uid://duo6ia3ep1swi" path="res://Levels/Levels/Easy/LevelNewEasy-v3-Day.tscn" id="19_fw3l5"]
 [ext_resource type="PackedScene" uid="uid://doaymr82s56cs" path="res://UserInterface/prompt.tscn" id="20_fw3l5"]
+[ext_resource type="PackedScene" uid="uid://l6xi1avn1kss" path="res://Levels/Levels/Medium/level_medium_v_1_a.tscn" id="20_nflnv"]
 [ext_resource type="PackedScene" uid="uid://8ktjydo1rakd" path="res://Actors/Enemies/Scenes/skull-enemy.tscn" id="21_1sae0"]
-[ext_resource type="PackedScene" uid="uid://fo617v2gma71" path="res://Levels/LevelMedium-v2-Day.tscn" id="21_fw3l5"]
-[ext_resource type="PackedScene" uid="uid://dxbsh51gk0r5t" path="res://Levels/level_hard_v1-D.tscn" id="21_wjjle"]
-[ext_resource type="PackedScene" uid="uid://dcwow24k31pnp" path="res://Levels/Hard-v1-T.tscn" id="22_1sae0"]
+[ext_resource type="PackedScene" uid="uid://fo617v2gma71" path="res://Levels/Levels/Medium/LevelMedium-v2-Day.tscn" id="21_fw3l5"]
+[ext_resource type="PackedScene" uid="uid://dxbsh51gk0r5t" path="res://Levels/Levels/Hard/level_hard_v1-D.tscn" id="21_wjjle"]
+[ext_resource type="PackedScene" uid="uid://dcwow24k31pnp" path="res://Levels/Levels/Hard/Hard-v1-T.tscn" id="22_1sae0"]
+[ext_resource type="PackedScene" uid="uid://c0rb4606h26kw" path="res://Levels/Levels/Hard/level_hard_v_1_a.tscn" id="23_3kmy4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pvsrc"]
 
@@ -4809,7 +4814,7 @@ zoom = Vector2(3, 3)
 process_callback = 0
 limit_left = 0
 limit_right = 1680
-limit_bottom = 1130
+limit_bottom = 2260
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -4861,9 +4866,13 @@ tile_set = ExtResource("7_vmy0u")
 [node name="SpikeBottom" parent="SubBGTiles" instance=ExtResource("17_8hqpc")]
 position = Vector2(392, 14)
 scale = Vector2(1.07998, 1)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom2" parent="SubBGTiles/SpikeBottom" instance=ExtResource("17_8hqpc")]
 position = Vector2(30, 0)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeSkull" parent="SubBGTiles/SpikeBottom" instance=ExtResource("11_8hqpc")]
 position = Vector2(15, -4)
@@ -4871,23 +4880,34 @@ position = Vector2(15, -4)
 [node name="SpikeBottom2" parent="SubBGTiles" instance=ExtResource("17_8hqpc")]
 position = Vector2(600, 14)
 scale = Vector2(1.07998, 1)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom2" parent="SubBGTiles/SpikeBottom2" instance=ExtResource("17_8hqpc")]
 position = Vector2(30, 0)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeSkull" parent="SubBGTiles/SpikeBottom2" instance=ExtResource("11_8hqpc")]
 position = Vector2(15, -4)
 
-[node name="Player" parent="." instance=ExtResource("9_v0v80")]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(42, 350)
-disable_mode = 1
+[node name="EasyLevel" parent="." instance=ExtResource("15_sh7yw")]
+position = Vector2(0, 648)
+scenes_to_spawn = Array[PackedScene]([ExtResource("19_fw3l5"), ExtResource("16_r2ueb"), ExtResource("17_o8jhj")])
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D")
-update_rotation = false
-update_scale = false
+[node name="Checkpoint" parent="EasyLevel" instance=ExtResource("14_o8jhj")]
+
+[node name="MediumLevel" parent="." instance=ExtResource("15_sh7yw")]
+position = Vector2(0, 1130)
+scenes_to_spawn = Array[PackedScene]([ExtResource("17_lybtp"), ExtResource("21_fw3l5"), ExtResource("20_nflnv")])
+
+[node name="Checkpoint" parent="MediumLevel" instance=ExtResource("14_o8jhj")]
+
+[node name="HardLevel" parent="." instance=ExtResource("15_sh7yw")]
+position = Vector2(0, 1611)
+scenes_to_spawn = Array[PackedScene]([ExtResource("21_wjjle"), ExtResource("22_1sae0"), ExtResource("23_3kmy4")])
+
+[node name="Checkpoint" parent="HardLevel" instance=ExtResource("14_o8jhj")]
 
 [node name="Slime" parent="." instance=ExtResource("10_exyks")]
 position = Vector2(1223, 456)
@@ -4897,18 +4917,6 @@ position = Vector2(1014, 606)
 
 [node name="Coin" parent="." instance=ExtResource("13_pxsij")]
 position = Vector2(629, 608)
-
-[node name="EasyLevel" parent="." instance=ExtResource("15_sh7yw")]
-position = Vector2(0, 648)
-scenes_to_spawn = Array[PackedScene]([ExtResource("19_fw3l5")])
-
-[node name="MediumLevel" parent="." instance=ExtResource("15_sh7yw")]
-position = Vector2(0, 1130)
-scenes_to_spawn = Array[PackedScene]([ExtResource("17_lybtp"), ExtResource("21_fw3l5")])
-
-[node name="HardLevel" parent="." instance=ExtResource("15_sh7yw")]
-position = Vector2(0, 1611)
-scenes_to_spawn = Array[PackedScene]([ExtResource("21_wjjle"), ExtResource("22_1sae0")])
 
 [node name="Label" parent="." instance=ExtResource("20_fw3l5")]
 offset_left = -134.384
@@ -4969,48 +4977,83 @@ position = Vector2(1489, 441)
 
 [node name="SpikeBottom" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(775, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom2" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(790, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom3" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(805, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom4" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(820, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom5" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(835, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom6" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(586, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom7" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(601, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom8" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(850, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom9" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(1209, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom10" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(1224, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom11" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(1239, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom12" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(1306, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom13" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(1321, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom14" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(1336, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom15" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(1402, 646)
+collision_layer = 72
+collision_mask = 1
 
 [node name="SpikeBottom16" parent="." instance=ExtResource("17_8hqpc")]
 position = Vector2(1417, 646)
+collision_layer = 72
+collision_mask = 1
+
+[node name="Player2" parent="." instance=ExtResource("9_v0v80")]
+position = Vector2(800, 603)

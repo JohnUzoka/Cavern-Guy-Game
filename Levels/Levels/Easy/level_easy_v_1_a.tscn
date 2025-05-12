@@ -14,8 +14,16 @@
 position = Vector2(1567, 69)
 scale = Vector2(0.8, 0.8)
 
+[node name="Rope2" parent="." instance=ExtResource("5_41gy0")]
+position = Vector2(1643, 297)
+scale = Vector2(0.8, 0.8)
+
 [node name="Sign" parent="." instance=ExtResource("6_r5vlq")]
 position = Vector2(1516, 348)
+scale = Vector2(0.731564, 0.728673)
+
+[node name="Sign2" parent="." instance=ExtResource("6_r5vlq")]
+position = Vector2(1510, 155)
 scale = Vector2(0.731564, 0.728673)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
