@@ -30,370 +30,296 @@ position = Vector2(1044, 430)
 [node name="SpikeBottom" parent="." instance=ExtResource("4_4l800")]
 position = Vector2(1289, 302)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom6" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-961, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom2" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(16, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(32, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom3" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(48, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeSkull" parent="SpikeBottom" instance=ExtResource("5_gqgm3")]
 position = Vector2(64, -4)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom5" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(95, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom7" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-945, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom8" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-929, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeSkull2" parent="SpikeBottom" instance=ExtResource("5_gqgm3")]
 position = Vector2(-913, -4)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom9" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-897, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom10" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-881, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom11" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-818, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom12" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-802, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeSkull3" parent="SpikeBottom" instance=ExtResource("5_gqgm3")]
 position = Vector2(-786, -4)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom13" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-770, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom14" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-754, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom15" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-609, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom16" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-593, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom17" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-577, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom18" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-561, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom19" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-545, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom20" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-529, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom21" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-513, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom22" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-497, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom23" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-481, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom24" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-465, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeSkull4" parent="SpikeBottom" instance=ExtResource("5_gqgm3")]
 position = Vector2(-449, -4)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom25" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-433, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom26" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-417, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom27" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-401, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom28" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-385, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom29" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-369, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom30" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-353, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom31" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-337, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom32" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-321, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom33" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-305, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom34" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-289, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom35" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-257, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeSkull5" parent="SpikeBottom" instance=ExtResource("5_gqgm3")]
 position = Vector2(-273, -4)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom36" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-241, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom37" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-225, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom38" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-209, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom39" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-193, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom40" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-177, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeSkull6" parent="SpikeBottom" instance=ExtResource("5_gqgm3")]
 position = Vector2(80, -4)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom4" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-161, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom41" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-145, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom42" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-129, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom43" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-113, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom44" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-97, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom45" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-81, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom46" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-65, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom47" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-49, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom48" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-33, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom49" parent="SpikeBottom" instance=ExtResource("4_4l800")]
 position = Vector2(-17, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom2" parent="." instance=ExtResource("4_4l800")]
 position = Vector2(856, 446)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom3" parent="SpikeBottom2" instance=ExtResource("4_4l800")]
 position = Vector2(-17, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom4" parent="SpikeBottom2" instance=ExtResource("4_4l800")]
 position = Vector2(-112, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom5" parent="SpikeBottom2" instance=ExtResource("4_4l800")]
 position = Vector2(-128, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom6" parent="SpikeBottom2" instance=ExtResource("4_4l800")]
 position = Vector2(-144, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom7" parent="SpikeBottom2" instance=ExtResource("4_4l800")]
 position = Vector2(-160, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom8" parent="SpikeBottom2" instance=ExtResource("4_4l800")]
 position = Vector2(-176, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SkullPath" parent="." instance=ExtResource("4_a6sek")]
 position = Vector2(848, 429)
-scale = Vector2(1, 2.08824)
 
 [node name="SpikeTop" parent="." instance=ExtResource("7_fa7pn")]
 position = Vector2(559, 355)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeTop2" parent="SpikeTop" instance=ExtResource("7_fa7pn")]
 position = Vector2(-16, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeTop3" parent="SpikeTop" instance=ExtResource("7_fa7pn")]
 position = Vector2(-32, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom" parent="SpikeTop" instance=ExtResource("4_4l800")]
 position = Vector2(-43, 90)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeSkull" parent="SpikeTop" instance=ExtResource("5_gqgm3")]
 position = Vector2(-59, 86)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeBottom2" parent="SpikeTop" instance=ExtResource("4_4l800")]
 position = Vector2(-75, 90)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeTop" parent="SpikeTop" instance=ExtResource("7_fa7pn")]
 position = Vector2(-87, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeTop4" parent="SpikeTop" instance=ExtResource("7_fa7pn")]
 position = Vector2(-119, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SpikeTop5" parent="SpikeTop" instance=ExtResource("7_fa7pn")]
 position = Vector2(-103, 0)
 collision_layer = 72
-collision_mask = 0
 
 [node name="SkullPath2" parent="." instance=ExtResource("4_a6sek")]
 position = Vector2(729, 426)
-scale = Vector2(1, 2.05882)
 
 [node name="SkullPath3" parent="." instance=ExtResource("4_a6sek")]
 position = Vector2(696, 426)

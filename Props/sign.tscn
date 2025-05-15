@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k35ox"]
 _data = {
-&"RESET": SubResource("Animation_5aj1n"),
-&"textbounce": SubResource("Animation_rswxu")
+"RESET": SubResource("Animation_5aj1n"),
+"textbounce": SubResource("Animation_rswxu")
 }
 
 [node name="Sign" type="Sprite2D"]
@@ -59,7 +59,7 @@ anchor_right = -3.313
 offset_left = 40.884
 offset_top = -32.4759
 offset_right = 316.884
-offset_bottom = 9.52405
+offset_bottom = 9.5241
 rotation = -0.523599
 scale = Vector2(0.4, 0.4)
 text = "DIVE FOR MORE"
@@ -67,6 +67,6 @@ label_settings = SubResource("LabelSettings_5aj1n")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_k35ox")
+"": SubResource("AnimationLibrary_k35ox")
 }
 autoplay = "textbounce"

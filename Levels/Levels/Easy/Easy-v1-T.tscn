@@ -33,7 +33,6 @@ position = Vector2(440, 399)
 
 [node name="SkullPath" parent="." instance=ExtResource("4_hcf31")]
 position = Vector2(637, 193)
-scale = Vector2(1, 1.64706)
 
 [node name="Heart" parent="." instance=ExtResource("7_2q0w7")]
 position = Vector2(936, 341)

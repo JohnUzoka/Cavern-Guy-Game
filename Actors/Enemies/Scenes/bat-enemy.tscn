@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://cyxhotcskawr2"]
 
-[ext_resource type="Script" uid="uid://oq6kf0lyy7ll" path="res://Actors/Enemies/Scripts/enemy_path.gd" id="1_vrreb"]
+[ext_resource type="Script" path="res://Actors/Enemies/Scripts/enemy_path.gd" id="1_vrreb"]
 [ext_resource type="Texture2D" uid="uid://c6pf8tniqljdg" path="res://Assets/Sprites/Characters/Bat/Bat_Fly.png" id="3_vrreb"]
-[ext_resource type="Script" uid="uid://cpyx44iiyfqr0" path="res://Components/hit_box_componet.gd" id="4_1fx3f"]
+[ext_resource type="Script" path="res://Components/hit_box_componet.gd" id="4_1fx3f"]
 
 [sub_resource type="Curve2D" id="Curve2D_cp4ch"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -34)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -60)
 }
 point_count = 2
 
@@ -52,7 +52,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_qps7f"]
 radius = 6.0
 
-[node name="SkullPath" type="Path2D"]
+[node name="BatPath" type="Path2D"]
 curve = SubResource("Curve2D_cp4ch")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
