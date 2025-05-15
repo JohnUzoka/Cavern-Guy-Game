@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c8e0csjn2rs1c"]
 
-[ext_resource type="Script" path="res://Props/rope.gd" id="1_iwwcy"]
+[ext_resource type="Script" uid="uid://dkaj8iy7l8j6i" path="res://Props/rope.gd" id="1_iwwcy"]
 [ext_resource type="FontFile" uid="uid://cn2wb6pkgc1u5" path="res://Assets/Others/aesymatt.ttf" id="2_bsqsk"]
 [ext_resource type="PackedScene" uid="uid://ci4hbivv3t7rj" path="res://UserInterface/end-game.tscn" id="2_wkt07"]
 [ext_resource type="Texture2D" uid="uid://b428ouy5kmabi" path="res://Assets/Sprites/props/rope1.png" id="3_wkt07"]
@@ -32,8 +32,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wkt07"]
 _data = {
-"RESET": SubResource("Animation_iwwcy"),
-"textbounce": SubResource("Animation_bsqsk")
+&"RESET": SubResource("Animation_iwwcy"),
+&"textbounce": SubResource("Animation_bsqsk")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bsqsk"]

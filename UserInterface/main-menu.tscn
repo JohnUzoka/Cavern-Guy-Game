@@ -62,8 +62,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_phmxg"]
 _data = {
-"RESET": SubResource("Animation_pbist"),
-"Title": SubResource("Animation_g7g51")
+&"RESET": SubResource("Animation_pbist"),
+&"Title": SubResource("Animation_g7g51")
 }
 
 [node name="Control" type="Control"]

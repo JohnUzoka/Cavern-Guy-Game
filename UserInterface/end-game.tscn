@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://ci4hbivv3t7rj"]
 
-[ext_resource type="Script" path="res://UserInterface/end_game.gd" id="1_00k4h"]
+[ext_resource type="Script" uid="uid://dvcxqygxo8jt4" path="res://UserInterface/end_game.gd" id="1_00k4h"]
 [ext_resource type="Texture2D" uid="uid://ci8cnmb7og8jh" path="res://Assets/Sprites/Items/gem/gemUI-1.png" id="1_61scl"]
 [ext_resource type="Texture2D" uid="uid://cecuplrfr7wmu" path="res://Assets/Sprites/Items/gem/gemUI-2.png" id="2_00k4h"]
 [ext_resource type="Texture2D" uid="uid://hnc447ut7lc0" path="res://Assets/Sprites/Items/gem/gemUI-3.png" id="3_o5fgq"]
@@ -140,8 +140,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g1jt0"]
 _data = {
-"RESET": SubResource("Animation_pplhw"),
-"Title": SubResource("Animation_y6jqx")
+&"RESET": SubResource("Animation_pplhw"),
+&"Title": SubResource("Animation_y6jqx")
 }
 
 [node name="Control" type="Control"]

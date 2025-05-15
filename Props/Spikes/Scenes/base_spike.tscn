@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://voskiqvwqfpo"]
 
-[ext_resource type="Script" path="res://Props/Spikes/Scripts/base_spike.gd" id="1_3evgn"]
+[ext_resource type="Script" uid="uid://derdj1shnos20" path="res://Props/Spikes/Scripts/base_spike.gd" id="1_3evgn"]
 [ext_resource type="PackedScene" uid="uid://d1v5xuu204hgo" path="res://Components/hit_box_componet.tscn" id="1_iahtd"]
 
 [node name="BaseSpike" type="StaticBody2D"]

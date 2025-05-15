@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k35ox"]
 _data = {
-"RESET": SubResource("Animation_5aj1n"),
-"textbounce": SubResource("Animation_rswxu")
+&"RESET": SubResource("Animation_5aj1n"),
+&"textbounce": SubResource("Animation_rswxu")
 }
 
 [node name="Sign" type="Sprite2D"]
