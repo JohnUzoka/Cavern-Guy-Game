@@ -1,6 +1,6 @@
 extends Node
 
-signal heath_changed(old_health, new_health)
+signal health_changed(old_health, new_health)
 signal coin_collected(value)
 
 var mob_score: int = 1

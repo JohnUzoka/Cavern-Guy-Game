@@ -10,7 +10,7 @@ extends VBoxContainer
 # Called when the node is added to the scene.
 func _ready():
 	# Connects event signals to handle health and coin changes.
-	Event.connect("heath_changed", _on_health_changed)
+	Event.connect("health_changed", _on_health_changed)
 	Event.connect("coin_collected", _on_coin_collected)
 
 # Updates the coin count UI when a coin is collected.
@@ -23,6 +23,7 @@ func _on_coin_collected(value) -> void:
 
 # Updates the health UI when the player's health changes.
 func _on_health_changed(old_health, new_health, max_health) -> void:
+
 	# Get the current number of health icons (hearts) displayed.
 	var lives_left = health_box_container.get_child_count()  
 
@@ -36,6 +37,7 @@ func _on_health_changed(old_health, new_health, max_health) -> void:
 	# If the player gained health, add new hearts up to the maximum.
 	else:
 		while lives_left < new_health and lives_left <= max_health:
+
 			# Create a new heart instance.
 			var heart = health_icon.instantiate()  
 			

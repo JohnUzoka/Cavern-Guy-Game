@@ -14,4 +14,4 @@ script = ExtResource("1_julon")
 position = Vector2(859.5, 10)
 shape = SubResource("RectangleShape2D_vcdqj")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

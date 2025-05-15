@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://8ktjydo1rakd"]
 
-[ext_resource type="Texture2D" uid="uid://cwsc3m6cbauru" path="res://Assets/Sprites/Characters/Skull/Bones_SingleSkull_Idle.png" id="1_cp4ch"]
+[ext_resource type="Texture2D" uid="uid://b12jnmsqn2fcq" path="res://Assets/Sprites/Characters/Skull/Bones_SingleSkull_Idle.png" id="1_cp4ch"]
 [ext_resource type="Script" uid="uid://oq6kf0lyy7ll" path="res://Actors/Enemies/Scripts/enemy_path.gd" id="1_fpg7m"]
 [ext_resource type="Script" uid="uid://cpyx44iiyfqr0" path="res://Components/hit_box_componet.gd" id="2_fpg7m"]
 

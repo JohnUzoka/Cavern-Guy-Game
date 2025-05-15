@@ -252,12 +252,12 @@ Assets:
 - Whimsy Hallow Asset Pack by Crumpaloo
 
 Project Manager / Game Designer / Programmer / Art Coordinator
-- John Uzoka
+- John Uzoka (john.uzoka@uleth.ca)
 
 Level Designers / Game Designers
-- Dayanna Estrella Fonte
-- Ty Mortensen
-- Alijah Peacock
+- Dayanna Estrella Fonte (estrellafonte@uleth.ca)
+- Ty Mortensen (ty.mortensen@uleth.ca)
+- Alijah Peacock (alijah.peacock@uleth.ca)
 "
 label_settings = SubResource("LabelSettings_4c6k8")
 
@@ -279,6 +279,6 @@ stretch_mode = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_g1jt0")
+"": SubResource("AnimationLibrary_g1jt0")
 }
 autoplay = "Title"

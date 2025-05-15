@@ -22,6 +22,9 @@ func _on_body_entered(hitbox: HitBox) -> void:
 		# Calls the owner's take_damage function and applies the damage from the hitbox.
 		owner.take_damage(hitbox.damage, hitbox)
 		
+	if hitbox.owner.has_method("bounce"):
+		hitbox.owner.bounce()
+
 # This function runs when the invincibility timer finishes.
 func _invincibility_timeout() -> void:  
 	# Enables the collision shape again, allowing the object to take damage.

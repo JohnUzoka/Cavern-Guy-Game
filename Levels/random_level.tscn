@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c81bktgliehgf"]
+[gd_scene load_steps=2 format=3 uid="uid://co6yi4e6v3tc4"]
 
-[ext_resource type="Script" uid="uid://cnrac6hchd7af" path="res://Levels/level_manager.gd" id="1_ksaj5"]
+[ext_resource type="Script" path="res://Levels/level_manager.gd" id="1_ksaj5"]
 
 [node name="EasyLevel" type="Node2D"]
 script = ExtResource("1_ksaj5")

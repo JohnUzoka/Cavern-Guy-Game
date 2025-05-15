@@ -10,6 +10,9 @@ signal game_over
 # Defines the force applied when the player jumps.
 @export var jump_impulse: float = 170.0  
 
+@export var bounce_impulse: float = 10.0  
+
+
 # falling sped multiplier
 @export var fall_multiplier = 3.5
 
@@ -33,6 +36,8 @@ var damage_taken: bool = false
 
 # Tracks if player is grabbing a rope
 var grabbing_rope: bool = false
+
+var bouncing: bool = false
 
 
 # Stores the player's initial spawn position for respawning.
@@ -62,7 +67,8 @@ func _physics_process(delta):
 	
 	# Makes the player jump if the jump button is pressed and they are on the floor.
 	# Jump buffer logic
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() or bouncing:
+		bouncing = false
 		velocity.y -= jump_impulse
 		jump_buffer_counter = 0.0  # Reset buffer if we jump
 	elif Input.is_action_just_pressed("jump"):
@@ -126,7 +132,7 @@ func take_damage(damage_amount, body) -> void:
 		damage_taken = true  # Prevent further damage until recovery.
 
 		# Emit a signal to update the UI with the new health value.
-		Event.emit_signal("heath_changed", old_health, player_health, MAX_HEALTH)
+		Event.emit_signal("health_changed", old_health, player_health, MAX_HEALTH)
 
 		# If the player is still alive, start the revive timer.
 		if player_health > 0:
@@ -181,3 +187,8 @@ func die():
 		
 func update_checkpoint(checkpoint: Vector2):
 	start_position = checkpoint
+
+func bounce():
+	print("bounce")
+	bouncing = true
+	velocity.y = -bounce_impulse
