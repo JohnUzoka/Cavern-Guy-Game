@@ -90,7 +90,7 @@ position = Vector2(914, 367)
 position = Vector2(1232, 429)
 
 [node name="Slime3" parent="." instance=ExtResource("10_w4ifn")]
-position = Vector2(172, 160)
+position = Vector2(208, 159)
 
 [node name="SkullPath" parent="." instance=ExtResource("12_73mo5")]
 position = Vector2(335, 173)

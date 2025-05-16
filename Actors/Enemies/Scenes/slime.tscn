@@ -151,7 +151,7 @@ shape = SubResource("CapsuleShape2D_2vwgw")
 debug_color = Color(1, 0, 1, 0.419608)
 
 [node name="CoolTimer" type="Timer" parent="."]
-wait_time = 7.0
+wait_time = 2.0
 
 [connection signal="chase_began" from="AttackBoxComponent" to="." method="_on_attack_box_component_chase_began"]
 [connection signal="chase_ended" from="AttackBoxComponent" to="." method="_on_attack_box_component_chase_ended"]
