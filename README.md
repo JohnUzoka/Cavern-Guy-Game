@@ -4,7 +4,7 @@ A Risky Descent for the Bold
 DeepDiver is a 2D platformer built in Godot Engine, where you play as an adventurous diver plunging into ever-deeper caves. Gather loot, evade dangers, and decide: play it safe or risk it all for legendary treasures at the lowest depths.
 
 ![image](https://github.com/user-attachments/assets/d29c2f3b-b70a-448c-81f9-168306fe214a)
-Navigating hazards in the abyss
+The decision of a lifetime
 
 # Gameplay Features
 Risk vs. Reward: Each floor offers loot, but descending increases danger—and potential rewards.
