@@ -31,15 +31,15 @@ Note: Requires no additional dependencies—just unzip and play!
 
 #Credits
 
-John Uzoka
+John Uzoka:
 Project Manager / Base Game Prototype / Game Designer / Programmer / Art Coordinator / Level Designer
 Contact: john.uzoka@uleth.ca
 
-Dayanna Estrella Fonte (Level Design / Game Design)
+Dayanna Estrella Fonte: (Level Design / Game Design)
 
-Ty Mortensen (Level Design / Game Design)
+Ty Mortensen: (Level Design / Game Design)
 
-Alijah Peacock (Level Design / Game Design)
+Alijah Peacock: (Level Design / Game Design)
 
 Engine:
 
