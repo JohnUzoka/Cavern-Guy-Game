@@ -29,7 +29,7 @@ Run Deep_Diver.exe (Windows) or the appropriate executable for your OS.
 
 Note: Requires no additional dependencies—just unzip and play!
 
-#Credits
+# Credits
 
 John Uzoka:
 Project Manager / Base Game Prototype / Game Designer / Programmer / Art Coordinator / Level Designer
@@ -41,7 +41,7 @@ Ty Mortensen: (Level Design / Game Design)
 
 Alijah Peacock: (Level Design / Game Design)
 
-Engine:
+# Software:
 
 Made with Godot Engine
 
